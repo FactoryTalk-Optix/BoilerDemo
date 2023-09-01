@@ -13,4 +13,4 @@ ProjectFiles/NetSolution/Private
 ProjectFiles/NetSolution/*.references
 ProjectFiles/UserDefinedModule.xml
 !*.md
-!LICENSE.md
+!LICENSE
