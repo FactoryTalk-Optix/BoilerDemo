@@ -1,0 +1,107 @@
+Name: BoilerDemo
+Id: g=7552f9d326d044d670694582c6d00622
+Type: ProjectFolder
+Children:
+- File: UI/UI.yaml
+- File: Model/Model.yaml
+- File: Converters/Converters.yaml
+- File: Alarms/Alarms.yaml
+- File: Recipes/Recipes.yaml
+- File: Loggers/Loggers.yaml
+- File: DataStores/DataStores.yaml
+- File: Reports/Reports.yaml
+- File: 'OPC-UA/OPC-UA.yaml'
+- File: CommDrivers/CommDrivers.yaml
+- File: NetLogic/NetLogic.yaml
+- File: Security/Security.yaml
+- File: Translations/Translations.yaml
+- File: Retentivity/Retentivity.yaml
+- Name: RecipeSchema
+  Id: g=c1937ac47afd4b70b674a970185817f3
+  Type: Alias
+  DataType: NodeId
+  Value: {"IdType":2,"Id":"e75a581c78bcfb3bf5d1f26f14b1514f","Namespace":40}
+  Children:
+  - Name: Kind
+    Id: g=9afbb306e524dd47bba40efc1bfaa9a5
+    Type: PropertyType
+    DataType: NodeId
+    Value: {"IdType":2,"Id":"6e92df5365a242ea9a45b1efe8bdd220","Namespace":40}
+- Name: PasswordPolicy
+  Id: g=bc8e491b19335b1bd7d6401caeb878aa
+  Type: PasswordPolicy
+  Children:
+  - Name: MaximumPasswordAge
+    Id: g=1b12e6f3f9dd67dd577a205d1beb6dab
+    Type: PropertyType
+    DataType: UInt16
+    Value: 0
+  - Name: EnforcePasswordHistory
+    Id: g=c99bd03fdd6f50b9e5a69305243a39eb
+    Type: PropertyType
+    DataType: Byte
+    Value: 0
+  - Name: MinimumPasswordAge
+    Id: g=7f1b25177c74fcbdf55b1a1707d7f071
+    Type: PropertyType
+    DataType: UInt16
+    Value: 0
+  - Name: MinimumPasswordLength
+    Id: g=b7fad6cfa819df3d6d75b77ff5729f73
+    Type: PropertyType
+    DataType: Byte
+    Value: 0
+- Name: Authentication
+  Id: g=4da65b06b55f383182ea9c1b9b00fa31
+  Type: PropertyGroup
+  Children:
+  - Name: DefaultUserFolder
+    Id: g=883d5df8410ef6cbd4ff1b3a05c8562f
+    Type: NodePointer
+    DataType: NodeId
+    ReferenceType: HasProperty
+    Value: {"IdType":2,"Id":"4ab8a898655d1fdff87d6980ad47e730","Namespace":40}
+    Children:
+    - Name: Kind
+      Id: g=17b3a40067b51cb4f64eaea4af96c762
+      Type: PropertyType
+      DataType: NodeId
+      Value: {"Id":61}
+- Name: AlarmConfiguration
+  Id: g=9dfd9e3bb64c9dd7700432dc51626bc7
+  Type: PropertyGroup
+  Children:
+  - Name: BranchingEnabled
+    Id: g=2cfcf3e6db90513c94a34b1a102cb8e5
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ReferenceType: HasProperty
+    Value: false
+- Name: Localization
+  Id: g=4c367771dd031dff28be56eb497df666
+  Type: PropertyGroup
+  Children:
+  - Name: Locales
+    Id: g=38ecea323c7650c1035f010d9b62afcf
+    Type: BaseDataVariableType
+    DataType: String
+    ReferenceType: HasProperty
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US","it-IT"]
+  - Name: LocaleFallbackList
+    Id: g=0cb34e9bb9ca0cb973e162877c78dfc9
+    Type: BaseDataVariableType
+    DataType: String
+    ReferenceType: HasProperty
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: ["en-US"]
+  - Name: MeasurementSystemMap
+    Id: g=be9be95f4a0297bfe8bd56d4667bc3eb
+    Type: BaseDataVariableType
+    DataType: MeasurementSystemMapItem
+    ReferenceType: HasProperty
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: []

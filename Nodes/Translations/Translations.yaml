@@ -1,0 +1,40 @@
+Name: Translations
+Id: g=6f3da805eee577c8578d06ab0be06bf8
+Type: TranslationsCategoryFolder
+Children:
+- Name: LocalizationDictionary1
+  Id: g=5d2efe56e40b443d216a4c161312a8b3
+  Type: LocalizationDictionary
+  DataType: String
+  ValueRank: OneOrMoreDimensions
+  ArrayDimensions: [0,0]
+  Value: 
+   {
+    "Type": 12,
+    "Dimensions": [23,3],
+    "Body": [
+     "","en-US","it-IT",
+     "Save","Save","Salva",
+     "Delete","Delete","Cancella",
+     "RecipeApply","Recipe applied","Ricetta applicata",
+     "Apply","Apply","Applica",
+     "Load","Load","Carica",
+     "RecipeDeleted","Recipe deleted","Ricetta eliminata",
+     "RecipeLoaded","Recipe loaded","Ricetta caricata",
+     "Acknowledge","Acknowledge","Riconosci",
+     "Acknowledge All","Acknowledge All","Riconosci Tutti",
+     "Confirm","Confirm","Conferma",
+     "Confirm All","Confirm All","Conferma tutti",
+     "SourceName","Source Variable","Variabile Sorgente",
+     "Timestamp","Timestamp","Timestamp",
+     "Name","Name","Nome",
+     "Message","Message","Messaggio",
+     "Active","Active","Attivo",
+     "Acked","Acked","Riconosciuto",
+     "Confirmed","Confirmed","Confermato",
+     "Severity","Severity","Gravità",
+     "Refresh","Refresh","Aggiorna",
+     "From","From","Da",
+     "To","To","A"
+    ]
+   }
