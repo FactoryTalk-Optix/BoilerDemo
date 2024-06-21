@@ -4,16 +4,18 @@ using FTOptix.NetLogic;
 using FTOptix.Recipe;
 using FTOptix.UI;
 using UAManagedCore;
-using FTOptix.RAEtherNetIP;
 #endregion
 
-public class RecipesEditorComboBoxLogic : BaseNetLogic {
-    public override void Start() {
+public class RecipesEditorComboBoxLogic : BaseNetLogic
+{
+    public override void Start()
+    {
         var comboBox = (ComboBox)Owner;
         comboBox.SelectedValueVariable.VariableChange += SelectedValueVariable_VariableChange;
     }
 
-    private void SelectedValueVariable_VariableChange(object sender, VariableChangeEventArgs e) {
+    private void SelectedValueVariable_VariableChange(object sender, VariableChangeEventArgs e)
+    {
         var comboBox = (ComboBox)Owner;
         if (comboBox.SelectedValue == null)
             return;
@@ -42,7 +44,8 @@ public class RecipesEditorComboBoxLogic : BaseNetLogic {
         recipeSchemaObject.CopyFromStoreRecipe(recipeName, editModelNode.NodeId, CopyErrorPolicy.BestEffortCopy);
     }
 
-    public override void Stop() {
+    public override void Stop()
+    {
         var comboBox = (ComboBox)Owner;
         comboBox.SelectedValueVariable.VariableChange -= SelectedValueVariable_VariableChange;
     }

@@ -47,13 +47,13 @@ Children:
            "Id": 887
           },
           "Body": {
-           "namespaceUri": "http://www.opcfoundation.org/UA/units/un/cefact",
-           "unitId": 5002322,
-           "displayName": {
+           "NamespaceUri": "http://www.opcfoundation.org/UA/units/un/cefact",
+           "UnitId": 5002322,
+           "DisplayName": {
             "LocaleId": "en-US",
             "Text": "l"
            },
-           "description": {
+           "Description": {
             "LocaleId": "en-US",
             "Text": "litre"
            }
@@ -73,29 +73,17 @@ Children:
           DataType: LocalizedText
           OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
           ReferenceType: HasProperty
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Description
           Id: g=f7eb8584d8eb2c7ffc691d4cfc319385
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
           ReferenceType: HasProperty
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: EURange
         Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
         Type: RangeType
-        DataType: EURange
+        DataType: Range
         DisplayName: {"LocaleId":"","Text":"EURange"}
-        Value: 
-         {
-          "TypeId": {
-           "Id": 884
-          },
-          "Body": {
-           "low": 0.0,
-           "high": 0.0
-          }
-         }
         Children:
         - Name: Low
           Id: g=a2f99f90b68d4d79541866f246053a46
@@ -103,14 +91,12 @@ Children:
           DataType: Double
           OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
           ReferenceType: HasProperty
-          Value: 0.0
         - Name: High
           Id: g=7ff977c92f1d0c3b9adac4ddc851ef6a
           Type: BaseVariableType
           DataType: Double
           OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
           ReferenceType: HasProperty
-          Value: 0.0
   - Name: FillLevelSetPoint
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSetPoint
     Type: BaseDataVariableType
@@ -159,13 +145,13 @@ Children:
            "Id": 887
           },
           "Body": {
-           "namespaceUri": "http://www.opcfoundation.org/UA/units/un/cefact",
-           "unitId": 4408652,
-           "displayName": {
+           "NamespaceUri": "http://www.opcfoundation.org/UA/units/un/cefact",
+           "UnitId": 4408652,
+           "DisplayName": {
             "LocaleId": "en-US",
             "Text": "°C"
            },
-           "description": {
+           "Description": {
             "LocaleId": "en-US",
             "Text": "degree Celsius"
            }
@@ -185,18 +171,16 @@ Children:
           DataType: LocalizedText
           OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
           ReferenceType: HasProperty
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
         - Name: Description
           Id: g=4a3f3bcd6a1b7eec7b2631992338bfba
           Type: BaseVariableType
           DataType: LocalizedText
           OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
           ReferenceType: HasProperty
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       - Name: EURange
         Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EURange
         Type: RangeType
-        DataType: EURange
+        DataType: Range
         DisplayName: {"LocaleId":"","Text":"EURange"}
         Value: 
          {
@@ -204,8 +188,8 @@ Children:
            "Id": 884
           },
           "Body": {
-           "low": 0.0,
-           "high": 100.0
+           "Low": 0.0,
+           "High": 100.0
           }
          }
         Children:
@@ -215,7 +199,6 @@ Children:
           DataType: Double
           OwnerId: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EURange
           ReferenceType: HasProperty
-          Value: 0.0
         - Name: High
           Id: g=ed705c6134bbf6a2b35cf5cb358946c8
           Type: BaseVariableType

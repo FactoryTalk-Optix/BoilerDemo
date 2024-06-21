@@ -1,0 +1,132 @@
+Name: Pumps
+Id: g=914bc9aff4bc594f66b95338b823acd1
+Type: FolderType
+Children:
+- Name: Pump1
+  Id: g=5020ac15af3d4cf82d14a166c9d6ade1
+  Type: MyPump
+  Children:
+  - Name: SetSpeed
+    Id: g=8921082b654c1973432a4b70650f82f1
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 50.0
+  - Name: CurrentSpeed
+    Id: g=0049dc3007981514ab810e6edf0f3cf4
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Command
+    Id: g=bb5ba3d1e053824978d284bc15fdf2fd
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Alarm
+    Id: g=913383354d6e11f88ce2fa041ce75556
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: InputDatalink
+    Id: g=c0f01343422ed738d58a79f330591921
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 1024
+  - Name: OutputDatalink
+    Id: g=7bed4a252d0e722ca31254265ba7c846
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Class: Reference
+    Target: g=b456058aadb79110f6d62b0fd87687f7
+    Direction: Forward
+  - Class: Reference
+    Target: g=01075f039fee346cc3736067eafc5eac
+    Direction: Forward
+  - Class: Reference
+    Target: g=c26d5da3172cd17505bb5edfc12dd827
+    Direction: Forward
+  - Name: Cw
+    Id: g=612e24b0f8a04727bb75b7bd52d898bd
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Ccw
+    Id: g=8d6119cd4cce73d0940d5a00cdbcfd63
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: UseRunFeedback
+    Id: g=49ce5fb45531aace31733cedd7d6b557
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: MinSpeed
+    Id: g=1721ab86ce5f4c72ca3d6b75acb5652a
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 10.0
+  - Name: MaxSpeed
+    Id: g=a3a31ac4dfdf4c54a5ff6e1c19cedca2
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 100.0
+  - Name: JoggingMode
+    Id: g=633e4742eaca669592d8ed4ab80a248e
+    Type: BaseDataVariableType
+    DataType: Boolean
+- Name: MyPump
+  Id: g=3f416b88e7515f41dc1ab9490d9c6712
+  Supertype: BaseObjectType
+  Children:
+  - Name: SetSpeed
+    Id: g=9c43da6a06bc3bde17573854fc564893
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: CurrentSpeed
+    Id: g=4c2b715ad9b6976d05ccded0871b7dca
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: Command
+    Id: g=e3a5d1338ffea04e528650edc6a8bbc7
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Alarm
+    Id: g=ded3f4f9319899c58836dea4a8d02311
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: InputDatalink
+    Id: g=fb9ae112a6da1be47a6523f90e8d1d04
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Name: OutputDatalink
+    Id: g=d3b0508fb6c4fc8e005cb1ec41d3a50d
+    Type: BaseDataVariableType
+    DataType: Int32
+  - Class: Method
+    Name: RunCcw
+    Id: g=b456058aadb79110f6d62b0fd87687f7
+  - Class: Method
+    Name: RunCw
+    Id: g=01075f039fee346cc3736067eafc5eac
+  - Class: Method
+    Name: StopMotor
+    Id: g=c26d5da3172cd17505bb5edfc12dd827
+  - Name: Cw
+    Id: g=27384eaf83c2f22821fadefd18e1b2c5
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: Ccw
+    Id: g=b5af68897180b608130f8219aeb7c102
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: UseRunFeedback
+    Id: g=b9c7dd08a7d330886fed4203c01f6123
+    Type: BaseDataVariableType
+    DataType: Boolean
+  - Name: MinSpeed
+    Id: g=d51261d5fd13e91a055d4297a6d144a8
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 10.0
+  - Name: MaxSpeed
+    Id: g=5256e16324b531c568dbc3708ec82874
+    Type: BaseDataVariableType
+    DataType: Float
+    Value: 100.0
+  - Name: JoggingMode
+    Id: g=b471e94397f15f9d3f7b43bf8e682d8e
+    Type: BaseDataVariableType
+    DataType: Boolean

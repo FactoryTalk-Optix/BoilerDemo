@@ -3,3 +3,5 @@ Id: g=66fec071d515e7b13a7b27eca2317830
 Type: ModelCategoryFolder
 Children:
 - File: Recipes/Recipes.yaml
+- File: Pumps/Pumps.yaml
+- File: Widgets/Widgets.yaml

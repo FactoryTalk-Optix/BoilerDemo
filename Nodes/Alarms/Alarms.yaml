@@ -2,42 +2,6 @@ Name: Alarms
 Id: g=af5ca2fcbb16c30a3e66fa65d067be2b
 Type: AlarmsCategoryFolder
 Children:
-- Name: ImportAndExportAlarms
-  Id: g=6d898892d541813e8abae2a0b2defff8
-  Type: NetLogic
-  WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
-  Children:
-  - Name: BehaviourStartPriority
-    Id: g=1710503c6180be716da02d9d675fee5f
-    Type: BehaviourStartPriorityVariableType
-    DataType: Byte
-    Value: 180
-  - Class: Method
-    Name: ImportAlarms
-    Id: g=8e9d2855fa9f65b7d0c6edc4b019cee5
-  - Class: Method
-    Name: ExportAlarms
-    Id: g=891182da66cbf251252d580792c92ef3
-  - Name: CSVPath
-    Id: g=fc85eed0efb6aa13abcfd23719789671
-    Type: BaseDataVariableType
-    DataType: AbsoluteResourceUri
-    Value: ""
-  - Name: CharacterSeparator
-    Id: g=cd037899b834f48b7728b330bf668fcf
-    Type: BaseDataVariableType
-    DataType: String
-    Value: ","
-  - Name: WrapFields
-    Id: g=d99898afd5c230b4a96f536cb4ca9ad2
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: false
-  - Name: MessageAsTranslationKey
-    Id: g=257d7d6325fac7e5d3dc9218330d81dc
-    Type: BaseDataVariableType
-    DataType: Boolean
-    Value: false
 - Name: LowLevelTank1
   Id: g=9e38b1dedd83af6e437b620cdd9b273e
   Type: ExclusiveLevelAlarmController
@@ -46,7 +10,6 @@ Children:
     Id: g=a7e7a784ed0c4f9cee97f3a435975d51
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=38170b78ef93fa71df1f07758ced589e
@@ -84,6 +47,20 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"LL1001 - Warning: Tank 1 Low level"}
+  - Class: Reference
+    Target: ns=23;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=135
+    Direction: Forward
+  - Name: Severity
+    Id: g=7f7ee58700162a1933ed87a962b71e02
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 10
 - Name: LowLevelTank2
   Id: g=1a3b2a18e132cdffc499702b79c86ca9
   Type: ExclusiveLevelAlarmController
@@ -92,7 +69,6 @@ Children:
     Id: g=17cbcd686aeb1743c8c1c005ca42c894
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=a2dc1e3568fc6188e6bbcf14d630d3d7
@@ -130,6 +106,20 @@ Children:
     Type: BaseDataVariableType
     DataType: LocalizedText
     Value: {"LocaleId":"en-US","Text":"LL1002 - Warning: Tank 2 Low level"}
+  - Class: Reference
+    Target: ns=23;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=135
+    Direction: Forward
+  - Name: Severity
+    Id: g=db80e6f85ecd82ad9bd02878402e1ba7
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 10
 - Name: LowLevelBoiler
   Id: g=002e57dac91dbd80913ed7c631d28d0f
   Type: ExclusiveLevelAlarmController
@@ -138,7 +128,6 @@ Children:
     Id: g=39dd81494cd5efcb3e797bdfd16a2178
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=0eb478a51403dc77e8c9e61ed375ed70
@@ -176,6 +165,20 @@ Children:
     Type: BaseDataVariableType
     DataType: Double
     Value: 5.0
+  - Class: Reference
+    Target: ns=23;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=135
+    Direction: Forward
+  - Name: Severity
+    Id: g=cf1b84910868aefaf44aeb8b14938d43
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 10
 - Name: EthernetIpStation
   Id: g=87db76f9d91999597081ceb11441eafc
   Type: OffNormalAlarmController
@@ -189,7 +192,6 @@ Children:
     Id: g=a3c7f1be7dce6ded8f31b9d80a811853
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=7261b00db3ffc61e945a30fe94472c56
@@ -236,7 +238,16 @@ Children:
     Id: g=c09004cc9d1e0179ef80a0377c815c6e
     Type: BaseDataVariableType
     DataType: UInt16
-    Value: 10
+    Value: 100
+  - Class: Reference
+    Target: ns=23;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=135
+    Direction: Forward
 - Name: OpcUaStation
   Id: g=78b3cc28e87eae5230dc96e6679803c3
   Type: ExclusiveLevelAlarmController
@@ -245,7 +256,6 @@ Children:
     Id: g=7bd18aafe949bb0f1a8ad1a15df67b35
     Type: BaseDataVariableType
     DataType: Double
-    Value: 0.0
     Children:
     - Name: DynamicLink
       Id: g=c641b0c90c4901e3590bc564f9743496
@@ -302,4 +312,144 @@ Children:
     Id: g=ad090ec5d228ce9e593b1e5720d66763
     Type: BaseDataVariableType
     DataType: UInt16
-    Value: 10
+    Value: 100
+  - Class: Reference
+    Target: ns=23;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=132
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=135
+    Direction: Forward
+- Name: PumpJogginMode
+  Id: g=614aacac44556c10c4f1f20cc73ddadc
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=87a26215cafddc7e89606003faa682dd
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=7f6c3526f00a416032e28de71a1fe7e8
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=a923edb11b49b598e5cee9d4e034240a
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Pumps/Pump1/JoggingMode"
+      Children:
+      - Name: Mode
+        Id: g=07143da774ac7935380c1ad5a20c8c58
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=5432f3d2a71ba2bb18b1a2432cfe98b1
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=23;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=132
+    Direction: Forward
+  - Name: Message
+    Id: g=8592454f6f20103aa42ac59bee8029b3
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Jogging Mode enabled"}
+  - Name: AutoAcknowledge
+    Id: g=5c5de30dea49714f0f96b4fc30708112
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Id: g=50c7d2c52bdac37237f911f2c6c2a98f
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Severity
+    Id: g=8b61085912a950430bcd86c286e69576
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 1
+- Name: PumpOverpressure
+  Id: g=df550e16b75918c5372d048822ac747d
+  Type: OffNormalAlarmController
+  Children:
+  - Name: NormalStateValue
+    Id: g=e2cf5d694c4705e4da37000a647bb1b7
+    Type: BaseDataVariableType
+    DataType: Double
+  - Name: InputValue
+    Id: g=1ab5f58e51e098f3d42f8c93817aad53
+    Type: BaseDataVariableType
+    DataType: Double
+    Children:
+    - Name: DynamicLink
+      Id: g=3e4314464cf93bea19c6e809e6507dfa
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/Pumps/Pump1/Alarm"
+      Children:
+      - Name: Mode
+        Id: g=dbb38fb50d9f0a69d3734adbcea7281d
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Id: g=c148769df3d33afedef1ba061f17dbfb
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=23;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=83
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=130
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=132
+    Direction: Forward
+  - Name: Message
+    Id: g=556cf64177f374f287eacbab513655f6
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"LocaleId":"en-US","Text":"Pump overpressure"}
+  - Name: Active
+    Id: g=8981bd08775666982c72f1b0144aa361
+    Type: BaseDataVariableType
+    DataType: Boolean
+    AccessLevel: Read
+  - Name: Severity
+    Id: g=ad333bd3b0f374795975a8f7c02b6288
+    Type: BaseDataVariableType
+    DataType: UInt16
+    Value: 100

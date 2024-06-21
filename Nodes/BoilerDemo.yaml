@@ -20,7 +20,7 @@ Children:
   Id: g=c1937ac47afd4b70b674a970185817f3
   Type: Alias
   DataType: NodeId
-  Value: {"IdType":2,"Id":"e75a581c78bcfb3bf5d1f26f14b1514f","Namespace":40}
+  Value: "/Objects/BoilerDemo/Recipes/RecipeSchema/EditModel"
   Children:
   - Name: Kind
     Id: g=9afbb306e524dd47bba40efc1bfaa9a5
@@ -33,24 +33,20 @@ Children:
   Children:
   - Name: MaximumPasswordAge
     Id: g=1b12e6f3f9dd67dd577a205d1beb6dab
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: UInt16
-    Value: 0
   - Name: EnforcePasswordHistory
     Id: g=c99bd03fdd6f50b9e5a69305243a39eb
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: Byte
-    Value: 0
   - Name: MinimumPasswordAge
     Id: g=7f1b25177c74fcbdf55b1a1707d7f071
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: UInt16
-    Value: 0
   - Name: MinimumPasswordLength
     Id: g=b7fad6cfa819df3d6d75b77ff5729f73
-    Type: PropertyType
+    Type: BaseDataVariableType
     DataType: Byte
-    Value: 0
 - Name: Authentication
   Id: g=4da65b06b55f383182ea9c1b9b00fa31
   Type: PropertyGroup
@@ -59,14 +55,13 @@ Children:
     Id: g=883d5df8410ef6cbd4ff1b3a05c8562f
     Type: NodePointer
     DataType: NodeId
-    ReferenceType: HasProperty
-    Value: {"IdType":2,"Id":"4ab8a898655d1fdff87d6980ad47e730","Namespace":40}
+    Value: "/Objects/BoilerDemo/Security/Users"
     Children:
     - Name: Kind
       Id: g=17b3a40067b51cb4f64eaea4af96c762
       Type: PropertyType
       DataType: NodeId
-      Value: {"Id":61}
+      Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
 - Name: AlarmConfiguration
   Id: g=9dfd9e3bb64c9dd7700432dc51626bc7
   Type: PropertyGroup
@@ -75,8 +70,6 @@ Children:
     Id: g=2cfcf3e6db90513c94a34b1a102cb8e5
     Type: BaseDataVariableType
     DataType: Boolean
-    ReferenceType: HasProperty
-    Value: false
 - Name: Localization
   Id: g=4c367771dd031dff28be56eb497df666
   Type: PropertyGroup
@@ -84,16 +77,14 @@ Children:
   - Name: Locales
     Id: g=38ecea323c7650c1035f010d9b62afcf
     Type: BaseDataVariableType
-    DataType: String
-    ReferenceType: HasProperty
+    DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
     Value: ["en-US","it-IT"]
   - Name: LocaleFallbackList
     Id: g=0cb34e9bb9ca0cb973e162877c78dfc9
     Type: BaseDataVariableType
-    DataType: String
-    ReferenceType: HasProperty
+    DataType: LocaleId
     ValueRank: OneDimension
     ArrayDimensions: [0]
     Value: ["en-US"]
@@ -101,7 +92,5 @@ Children:
     Id: g=be9be95f4a0297bfe8bd56d4667bc3eb
     Type: BaseDataVariableType
     DataType: MeasurementSystemMapItem
-    ReferenceType: HasProperty
     ValueRank: OneDimension
     ArrayDimensions: [0]
-    Value: []

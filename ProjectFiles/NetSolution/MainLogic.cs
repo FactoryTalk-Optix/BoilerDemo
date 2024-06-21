@@ -2,11 +2,12 @@
 using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using UAManagedCore;
-using FTOptix.RAEtherNetIP;
 #endregion
 
-public class MainLogic : BaseNetLogic {
-    public override void Start() {
+public class MainLogic : BaseNetLogic
+{
+    public override void Start()
+    {
         var highLevel = Project.Current.GetVariable("OPC-UA/OPCUAClient/Objects/Demo/BoilerDemo/Boiler1/FillLevelSensor/FillLevel/EURange/High");
         if (highLevel != null)
             highLevel.Value = 100;
@@ -21,7 +22,8 @@ public class MainLogic : BaseNetLogic {
             lowTemperature.Value = -10;
     }
 
-    public override void Stop() {
+    public override void Stop()
+    {
         // Insert code to be executed when the user-defined logic is stopped
     }
 }

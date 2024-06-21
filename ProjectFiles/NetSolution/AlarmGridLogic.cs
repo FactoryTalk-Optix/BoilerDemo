@@ -2,11 +2,12 @@
 using FTOptix.NetLogic;
 using FTOptix.UI;
 using UAManagedCore;
-using FTOptix.RAEtherNetIP;
 #endregion
 
-public class AlarmGridLogic : BaseNetLogic {
-    public override void Start() {
+public class AlarmGridLogic : BaseNetLogic
+{
+    public override void Start()
+    {
         alarmsDataGridModel = Owner.Get<DataGrid>("AlarmsDataGrid").GetVariable("Model");
 
         var currentSession = LogicObject.Context.Sessions.CurrentSessionInfo;
@@ -14,11 +15,13 @@ public class AlarmGridLogic : BaseNetLogic {
         actualLanguagesVariable.VariableChange += OnSessionActualLanguagesChange;
     }
 
-    public override void Stop() {
+    public override void Stop()
+    {
         actualLanguagesVariable.VariableChange -= OnSessionActualLanguagesChange;
     }
 
-    public void OnSessionActualLanguagesChange(object sender, VariableChangeEventArgs e) {
+    public void OnSessionActualLanguagesChange(object sender, VariableChangeEventArgs e)
+    {
         var dynamicLink = alarmsDataGridModel.GetVariable("DynamicLink");
         if (dynamicLink == null)
             return;

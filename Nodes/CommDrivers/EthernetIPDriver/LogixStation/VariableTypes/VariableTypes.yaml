@@ -7,28 +7,11 @@ Children:
   Supertype: TagStructure
   DataType: TankUDT1
   ValueRank: Any
-  Value: 
-   {
-    "TypeId": {
-     "IdType": 2,
-     "Id": "9de7710f18037d276f22511df6881ec0",
-     "Namespace": 40
-    },
-    "Body": {
-     "ValveInStatus": false,
-     "ValveInCmd": false,
-     "ValveOutStatus": false,
-     "ValveOutCmd": false,
-     "Level": 0.0,
-     "SetPoint": 0.0
-    }
-   }
   Children:
   - Name: ValveInStatus
     Id: g=61fe37b416af280c63b0216d931336ae
     Type: RAEtherNetIPTag
     DataType: Boolean
-    Value: false
     Children:
     - Name: SymbolName
       Id: g=adee115b3faff231195b2995db767fcd
@@ -39,7 +22,6 @@ Children:
     Id: g=19776c49bb4c3a3d9c92afba57960a78
     Type: RAEtherNetIPTag
     DataType: Boolean
-    Value: false
     Children:
     - Name: SymbolName
       Id: g=d8389f38ebbe667eff39899f46fd276f
@@ -50,7 +32,6 @@ Children:
     Id: g=b3c6a639f9690bc815307c43a5590340
     Type: RAEtherNetIPTag
     DataType: Boolean
-    Value: false
     Children:
     - Name: SymbolName
       Id: g=7728af060ddaf8aee833714f475da452
@@ -61,7 +42,6 @@ Children:
     Id: g=91da8d9db715c328bfa467a9ca88fd3b
     Type: RAEtherNetIPTag
     DataType: Boolean
-    Value: false
     Children:
     - Name: SymbolName
       Id: g=b27bc1c9809e3cb2035003af6a357011
@@ -72,7 +52,6 @@ Children:
     Id: g=1bf43ae2a29cdeec259e5d9fe09d0999
     Type: RAEtherNetIPTag
     DataType: Float
-    Value: 0.0
     Children:
     - Name: SymbolName
       Id: g=3481be790b3b23ca76f05f6a3de5eb95
@@ -83,7 +62,6 @@ Children:
     Id: g=bd23ae846d9b2fc5438002f0cadc206f
     Type: RAEtherNetIPTag
     DataType: Float
-    Value: 0.0
     Children:
     - Name: SymbolName
       Id: g=9203770692dee3c12cf2fd7f4dd6977b

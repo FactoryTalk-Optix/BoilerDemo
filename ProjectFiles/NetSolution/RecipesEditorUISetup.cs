@@ -8,14 +8,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UAManagedCore;
-using FTOptix.RAEtherNetIP;
 using OpcUa = UAManagedCore.OpcUa;
 #endregion
 
-public class RecipesEditorUISetup : BaseNetLogic {
+public class RecipesEditorUISetup : BaseNetLogic
+{
     [ExportMethod]
-    public void Setup() {
-        try {
+    public void Setup()
+    {
+        try
+        {
             schema = GetRecipeSchema();
 
             var schemaEntries = GetSchemaEntries();
@@ -31,12 +33,15 @@ public class RecipesEditorUISetup : BaseNetLogic {
             SetTargetNodeToButtonMethod("LoadButton", "SourceNode");
 
             BuildUIFromSchemaRecursive(schemaEntries, controlsContainer, new List<string>());
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             Log.Error("RecipesEditor", e.Message);
         }
     }
 
-    private RecipeSchema GetRecipeSchema() {
+    private RecipeSchema GetRecipeSchema()
+    {
         var recipeSchemaPtr = Owner.GetVariable("RecipeSchema");
         if (recipeSchemaPtr == null)
             throw new Exception("RecipeSchema variable not found");
@@ -57,7 +62,8 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return schema;
     }
 
-    private ChildNodeCollection GetSchemaEntries() {
+    private ChildNodeCollection GetSchemaEntries()
+    {
         var rootNode = schema.Get("Root");
         if (rootNode == null)
             throw new Exception("Root node not found in recipe schema " + schema.BrowseName);
@@ -69,7 +75,8 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return schemaEntries;
     }
 
-    private ColumnLayout GetControlsContainer() {
+    private ColumnLayout GetControlsContainer()
+    {
         var scrollView = Owner.Get("ScrollView");
         if (scrollView == null)
             throw new Exception("ScrollView not found");
@@ -81,13 +88,15 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return controlsContainer;
     }
 
-    private void CleanUI(ColumnLayout controlsContainer) {
+    private void CleanUI(ColumnLayout controlsContainer)
+    {
         controlsContainer.Children.Clear();
         controlsContainer.Height = 0;
         controlsContainer.HorizontalAlignment = HorizontalAlignment.Stretch;
     }
 
-    private void ConfigureComboBox() {
+    private void ConfigureComboBox()
+    {
         // Set store as model for ComboBox
         var recipesComboBox = Owner.Get<ComboBox>("RecipesComboBox");
         if (recipesComboBox == null)
@@ -103,7 +112,8 @@ public class RecipesEditorUISetup : BaseNetLogic {
         recipesComboBox.Query = "SELECT * FROM \"" + tableName + "\"";
     }
 
-    private IUANode GetTargetNode() {
+    private IUANode GetTargetNode()
+    {
         var targetNode = schema.GetVariable("TargetNode");
         if (targetNode == null)
             throw new Exception("Target Node variable not found in schema " + schema.BrowseName);
@@ -118,7 +128,8 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return target;
     }
 
-    private void SetTargetNodeToButtonMethod(string buttonName, string argumentName) {
+    private void SetTargetNodeToButtonMethod(string buttonName, string argumentName)
+    {
         var applyButton = Owner.Get(buttonName);
         if (applyButton == null)
             throw new Exception(buttonName + "not found");
@@ -127,15 +138,19 @@ public class RecipesEditorUISetup : BaseNetLogic {
         argumentNode.Value = target.NodeId;
     }
 
-    private void BuildUIFromSchemaRecursive(IEnumerable<IUANode> entries, Item controlsContainer, List<string> browsePath) {
-        foreach (var entry in entries) {
+    private void BuildUIFromSchemaRecursive(IEnumerable<IUANode> entries, Item controlsContainer, List<string> browsePath)
+    {
+        foreach (var entry in entries)
+        {
             List<string> currentBrowsePath = browsePath.ToList();
             currentBrowsePath.Add(entry.BrowseName);
 
-            if (entry.NodeClass == NodeClass.Variable) {
+            if (entry.NodeClass == NodeClass.Variable)
+            {
                 var variable = (IUAVariable)entry;
                 var controls = BuildControl(variable, currentBrowsePath);
-                foreach (var control in controls) {
+                foreach (var control in controls)
+                {
                     controlsContainer.Height += control.Height;
                     controlsContainer.Add(control);
                 }
@@ -146,13 +161,15 @@ public class RecipesEditorUISetup : BaseNetLogic {
         }
     }
 
-    private List<Item> BuildControl(IUAVariable variable, List<string> browsePath) {
+    private List<Item> BuildControl(IUAVariable variable, List<string> browsePath)
+    {
         var result = new List<Item>();
 
         var dataType = variable.Context.GetDataType(variable.DataType);
         var arrayDimensions = variable.ArrayDimensions;
 
-        if (arrayDimensions.Length == 0) {
+        if (arrayDimensions.Length == 0)
+        {
             if (dataType.IsSubTypeOf(OpcUa.DataTypes.Integer))
                 result.Add(BuildSpinbox(variable, browsePath));
             else if (dataType.IsSubTypeOf(OpcUa.DataTypes.Boolean))
@@ -161,27 +178,38 @@ public class RecipesEditorUISetup : BaseNetLogic {
                 result.Add(BuildDurationPicker(variable, browsePath));
             else
                 result.Add(BuildTextBox(variable, browsePath));
-        } else if (arrayDimensions.Length == 1) {
-            if (dataType.IsSubTypeOf(OpcUa.DataTypes.Integer)) {
+        }
+        else if (arrayDimensions.Length == 1)
+        {
+            if (dataType.IsSubTypeOf(OpcUa.DataTypes.Integer))
+            {
                 foreach (var item in BuildSpinBoxArray(variable, browsePath))
                     result.Add(item);
-            } else if (dataType.IsSubTypeOf(OpcUa.DataTypes.Boolean)) {
+            }
+            else if (dataType.IsSubTypeOf(OpcUa.DataTypes.Boolean))
+            {
                 foreach (var item in BuildSwitchArray(variable, browsePath))
                     result.Add(item);
-            } else if (dataType.IsSubTypeOf(OpcUa.DataTypes.Duration)) {
+            }
+            else if (dataType.IsSubTypeOf(OpcUa.DataTypes.Duration))
+            {
                 foreach (var item in BuildDurationPickerArray(variable, browsePath))
                     result.Add(item);
-            } else {
+            }
+            else
+            {
                 foreach (var item in BuildTextBoxArray(variable, browsePath))
                     result.Add(item);
             }
-        } else
+        }
+        else
             Log.Error("RecipesEditor", "Unsupported multi-dimensional array parameter " + Log.Node(variable));
 
         return result;
     }
 
-    private Item BuildControlPanel(IUAVariable variable, List<string> browsePath, uint[] indexes = null) {
+    private Item BuildControlPanel(IUAVariable variable, List<string> browsePath, uint[] indexes = null)
+    {
         var panel = InformationModel.MakeObject<Panel>(variable.BrowseName);
         panel.Height = 40;
         panel.HorizontalAlignment = HorizontalAlignment.Stretch;
@@ -196,8 +224,10 @@ public class RecipesEditorUISetup : BaseNetLogic {
         panel.Add(label);
 
         var node = target;
-        foreach (var nodeBrowseName in browsePath) {
-            if (node == null) {
+        foreach (var nodeBrowseName in browsePath)
+        {
+            if (node == null)
+            {
                 Log.Error("RecipesEditor", "Node " + BrowsePathToNodePath(browsePath) + " not found in target " + target.BrowseName);
                 continue;
             }
@@ -220,7 +250,8 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return panel;
     }
 
-    private Item BuildDurationPicker(IUAVariable variable, List<string> browsePath) {
+    private Item BuildDurationPicker(IUAVariable variable, List<string> browsePath)
+    {
         var panel = BuildControlPanel(variable, browsePath);
 
         var durationPicker = InformationModel.MakeObject<DurationPicker>("DurationPicker");
@@ -236,11 +267,13 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return panel;
     }
 
-    private List<Item> BuildDurationPickerArray(IUAVariable variable, List<string> browsePath) {
+    private List<Item> BuildDurationPickerArray(IUAVariable variable, List<string> browsePath)
+    {
         var result = new List<Item>();
 
         var arrayDimensions = variable.ArrayDimensions;
-        for (uint index = 0; index < arrayDimensions[0]; ++index) {
+        for (uint index = 0; index < arrayDimensions[0]; ++index)
+        {
             var panel = BuildControlPanel(variable, browsePath, new uint[] { index });
 
             var durationPicker = InformationModel.MakeObject<DurationPicker>("DurationPicker");
@@ -259,7 +292,8 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return result;
     }
 
-    private Item BuildSpinbox(IUAVariable variable, List<string> browsePath) {
+    private Item BuildSpinbox(IUAVariable variable, List<string> browsePath)
+    {
         var panel = BuildControlPanel(variable, browsePath);
 
         var spinbox = InformationModel.MakeObject<SpinBox>("SpinBox");
@@ -275,11 +309,13 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return panel;
     }
 
-    private List<Item> BuildSpinBoxArray(IUAVariable variable, List<string> browsePath) {
+    private List<Item> BuildSpinBoxArray(IUAVariable variable, List<string> browsePath)
+    {
         var result = new List<Item>();
 
         var arrayDimensions = variable.ArrayDimensions;
-        for (uint index = 0; index < arrayDimensions[0]; ++index) {
+        for (uint index = 0; index < arrayDimensions[0]; ++index)
+        {
             var panel = BuildControlPanel(variable, browsePath, new uint[] { index });
 
             var spinbox = InformationModel.MakeObject<SpinBox>("SpinBox");
@@ -298,7 +334,8 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return result;
     }
 
-    private Item BuildTextBox(IUAVariable variable, List<string> browsePath) {
+    private Item BuildTextBox(IUAVariable variable, List<string> browsePath)
+    {
         var panel = BuildControlPanel(variable, browsePath);
 
         var textbox = InformationModel.MakeObject<TextBox>("Textbox");
@@ -314,11 +351,13 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return panel;
     }
 
-    private List<Item> BuildTextBoxArray(IUAVariable variable, List<string> browsePath) {
+    private List<Item> BuildTextBoxArray(IUAVariable variable, List<string> browsePath)
+    {
         var result = new List<Item>();
 
         var arrayDimensions = variable.ArrayDimensions;
-        for (uint index = 0; index < arrayDimensions[0]; ++index) {
+        for (uint index = 0; index < arrayDimensions[0]; ++index)
+        {
             var panel = BuildControlPanel(variable, browsePath, new uint[] { index });
 
             var textbox = InformationModel.MakeObject<TextBox>("Textbox");
@@ -337,7 +376,8 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return result;
     }
 
-    private Item BuildSwitch(IUAVariable variable, List<string> browsePath) {
+    private Item BuildSwitch(IUAVariable variable, List<string> browsePath)
+    {
         var panel = BuildControlPanel(variable, browsePath);
 
         var switchControl = InformationModel.MakeObject<Switch>("Switch");
@@ -353,11 +393,13 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return panel;
     }
 
-    private List<Item> BuildSwitchArray(IUAVariable variable, List<string> browsePath) {
+    private List<Item> BuildSwitchArray(IUAVariable variable, List<string> browsePath)
+    {
         var result = new List<Item>();
 
         var arrayDimensions = variable.ArrayDimensions;
-        for (uint index = 0; index < arrayDimensions[0]; ++index) {
+        for (uint index = 0; index < arrayDimensions[0]; ++index)
+        {
             var panel = BuildControlPanel(variable, browsePath, new uint[] { index });
 
             var switchControl = InformationModel.MakeObject<Switch>("Switch");
@@ -375,34 +417,40 @@ public class RecipesEditorUISetup : BaseNetLogic {
 
         return result;
     }
-    private void MakeDynamicLink(IUAVariable parent, string nodePath) {
+    private void MakeDynamicLink(IUAVariable parent, string nodePath)
+    {
         var dataBind = InformationModel.MakeVariable<DynamicLink>("DynamicLink", FTOptix.Core.DataTypes.NodePath);
         dataBind.Value = nodePath;
         dataBind.Mode = DynamicLinkMode.ReadWrite;
         parent.Refs.AddReference(FTOptix.CoreBase.ReferenceTypes.HasDynamicLink, dataBind);
     }
 
-    private void MakeDynamicLink(IUAVariable parent, string nodePath, uint index) {
+    private void MakeDynamicLink(IUAVariable parent, string nodePath, uint index)
+    {
         MakeDynamicLink(parent, nodePath + "[" + index.ToString() + "]");
     }
 
-    private IUAVariable GetInputArgument(IUANode node, int methodIndex, string argumentName) {
+    private IUAVariable GetInputArgument(IUANode node, int methodIndex, string argumentName)
+    {
         var browsePath = "EventHandler1/MethodsToCall/MethodContainer" + methodIndex + "/InputArguments";
         var inputArguments = node.GetObject(browsePath);
         return inputArguments.GetVariable(argumentName);
     }
 
-    private string MakeNodePathRelativeToAlias(string aliasName, List<string> browsePath) {
+    private string MakeNodePathRelativeToAlias(string aliasName, List<string> browsePath)
+    {
         return "{" + EscapeNodePathBrowseName(schema.BrowseName) + "}/" + BrowsePathToNodePath(browsePath);
     }
 
-    private string BrowsePathToNodePath(List<string> browsePath) {
+    private string BrowsePathToNodePath(List<string> browsePath)
+    {
         if (browsePath.Count == 1)
             return EscapeNodePathBrowseName(browsePath[0]);
 
         string result = "";
 
-        for (int i = 0; i < browsePath.Count; ++i) {
+        for (int i = 0; i < browsePath.Count; ++i)
+        {
             result += EscapeNodePathBrowseName(browsePath[i]);
             if (i != browsePath.Count - 1)
                 result += "/";
@@ -411,11 +459,14 @@ public class RecipesEditorUISetup : BaseNetLogic {
         return result;
     }
 
-    private string EscapeNodePathBrowseName(string browseName) {
+    private string EscapeNodePathBrowseName(string browseName)
+    {
         string result = "";
 
-        for (int i = 0; i < browseName.Length; ++i) {
-            switch (browseName[i]) {
+        for (int i = 0; i < browseName.Length; ++i)
+        {
+            switch (browseName[i])
+            {
                 case '&':
                 case '/':
                 case ':':

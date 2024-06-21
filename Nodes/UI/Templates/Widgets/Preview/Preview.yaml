@@ -1,0 +1,1090 @@
+Name: Preview
+Id: g=2c1d12b4ce515027844cadf85d79c763
+Type: FolderType
+Children:
+- Name: IconGaugeTank1
+  Id: g=bf7d00ca0a189d24b051bb22d7d5e5cf
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=970650c58d42f3f37a8519cec90345bb
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: Height
+    Id: g=33a3922a4cc6c2306894ae76b539d333
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: FillColor
+    Id: g=df826d7b0d64f7903f78527e753e9f97
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#afafaf"
+  - Name: CornerRadius
+    Id: g=675547615e7db79fef401b3859b55c33
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0
+  - Name: Image1
+    Id: g=00dcb3b17276d127b2430dcbf64d4783
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=2da3c211c9e1b2a377eee76b9f08d2a3
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=40;%PROJECTDIR%/res/speed_black_24dp.svg"
+    - Name: Width
+      Id: g=95e4bf4d42076864d159a19d4549e1c9
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=a884d6920c0a4241f3b807598bad3ebf
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Id: g=00d24c6c02cb44087a309cffc40fe6be
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=c8d0476986059235dfbdb58d2ca4ae42
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: BottomMargin
+      Id: g=c73003c80be112ab7f724caaafcf3dcb
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: DynamicColor
+      Id: g=5fd71762d3e9d64a775f1e6d3f1141cf
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e4e4e4"
+  - Name: Label1
+    Id: g=16d35b481f2f88e2dea34dec8746f7df
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=e0d2c22a8886fed8a071f3654a294420
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Tank1"}
+    - Name: HorizontalAlignment
+      Id: g=01a0e20c169bc97ad8e5c6a41f11ced8
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=66e61b1ce81cc6295ec78adb26b6c9b3
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: BottomMargin
+      Id: g=8591dd7e21e7bff7c29d482ce7f75293
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+  - Name: MoveTarget
+    Id: g=f262786b8a607fab9004706098930e6e
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=bf1848d8002c14646704a2d0a923d4ea
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: DynamicLink
+      Id: g=60d0cf04bf50fb5bcf4cb85411e3f4fb
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"
+  - Name: HitTestVisible
+    Id: g=454d5a31895f19f8fca394a320179366
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Label2
+    Id: g=6c95925da90fec76c83dbff23f15d888
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=52b84f525af6b8ab945df88e198ce3c2
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=40487fd17578dc4c2bb81bbffeefb290
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../LeftMargin"
+    - Name: Visible
+      Id: g=e246befc03f92d0871389bd5cc733ef5
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+  - Name: LeftMargin
+    Id: g=a0a61aff0d38753b776af62f33eb174b
+    Type: BaseVariableType
+    DataType: Size
+  - Name: Label3
+    Id: g=2d49275c1d33b408e23cb2b69ecac8a7
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=3e3051235e7e0d0f7f89c265fa658845
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=a8502b69453f134c89c705219799fd52
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../TopMargin"
+    - Name: Visible
+      Id: g=9813e94b6b6af52acc7b2efce958bda4
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+    - Name: LeftMargin
+      Id: g=bcff6a911b89627a187bdaa7ba0944c0
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=323a0f463295b10a616a956c18bb9b80
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: TopMargin
+    Id: g=bdec71d78dbe5793007ecb6b7b26ddf2
+    Type: BaseVariableType
+    DataType: Size
+- Name: IconGaugeTank2
+  Id: g=fd3ec927ff5574a702fab874ac4747a5
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=bc7c9fcfb988674ebe53bbaf07a9d057
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: Height
+    Id: g=f625e6ef6017edb6f9aee84929053e28
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: FillColor
+    Id: g=f0e4e90b0ea07ff0f88968af96ae17e3
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#afafaf"
+  - Name: CornerRadius
+    Id: g=174a3667a1c1250ededda3f0dee9061e
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0
+  - Name: Image1
+    Id: g=07b909e1afbbde66e1765ef4206985af
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=b4eb5ca99850c2c92593d536ff1d473a
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=40;%PROJECTDIR%/res/speed_black_24dp.svg"
+    - Name: Width
+      Id: g=e557048be247a5d901b57a4a3059a430
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=d469cf72685fa2b573bfca0d92c6f904
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Id: g=5b86ee9232635ea08a13cd32867a2737
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=8129a9c27482206d9f6368c08a0508ee
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: BottomMargin
+      Id: g=d5d8bec1865ffbbf24f76bb3448d2ff9
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: DynamicColor
+      Id: g=2e6f5eb68f98e2ff28717ff79f43181f
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e4e4e4"
+  - Name: Label1
+    Id: g=15a5f4cddb77c94214f13619e9940aa0
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=14dd7dd284108f2d4d68e19e6e11aab7
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Tank2"}
+    - Name: HorizontalAlignment
+      Id: g=d09e8513f1bc542b39c4dcacf333cfc7
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=7f82c54bff5aeba7e7adeed210271114
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: BottomMargin
+      Id: g=f2ee2d0e37008bc1d8583d25f6c0d04f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+  - Name: MoveTarget
+    Id: g=98245f5a58a12949a66e2ddf26d6eba9
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=aed4aa8778bff5682477a6cc3af44d33
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: DynamicLink
+      Id: g=2da527c384203616a267a6187afd9862
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"
+  - Name: HitTestVisible
+    Id: g=7302e0cd78f6ff8733592885305c54c9
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Label2
+    Id: g=c1c9485c70964b0cd3c625d025465206
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=3abe525ecb81974767560414bfad3987
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=30a84aeb494f661320c05a66ce79208f
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../LeftMargin"
+    - Name: Visible
+      Id: g=9268d1d49186a6b16eb363d35adcc938
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+  - Name: LeftMargin
+    Id: g=8a99e48f493911c2b85cba79c77b99a2
+    Type: BaseVariableType
+    DataType: Size
+  - Name: Label3
+    Id: g=ae65ba2e5eacbc0958b887986ebb5327
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=cbbf60a7406f745d835719d620c063dd
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=df03e2848b5dddeda8d5f9ddfbd2bb84
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../TopMargin"
+    - Name: Visible
+      Id: g=61bb2dd9c7b7f2dd554fc45f63cfad96
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+    - Name: LeftMargin
+      Id: g=9e9139a0ae43132f79c743c5bc20cfe9
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=e822f44f50ad7ca60f4f1c6dc8a3dedd
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: TopMargin
+    Id: g=297f4860f06f7405970d4e93e4e7a383
+    Type: BaseVariableType
+    DataType: Size
+- Name: IconGaugeBoiler
+  Id: g=8aba8ce92ad243c115fe4975af1815a7
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=53bff343f549a0a7bddb5e346b9deba5
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: Height
+    Id: g=8af9bcfd141a82853224176e315fafcf
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: FillColor
+    Id: g=55891f4ac16bbaf6938a70326373e9f8
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#afafaf"
+  - Name: CornerRadius
+    Id: g=ea9932132b4f3ab59a0e0f4ad537869e
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0
+  - Name: Image1
+    Id: g=0510cfe61e50bc6afe53cbcfc20495c2
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=f9a592fc689adb6c4ca7b29926f01b96
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=40;%PROJECTDIR%/res/speed_black_24dp.svg"
+    - Name: Width
+      Id: g=50d19793f7faa7f4edc3392fb8e9746c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=96752246f281180fe813905b0d86a635
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Id: g=3cca8441bb471022fd0da21150d481d6
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=2a5fd2e8f9681aed8e43a3b8a1d927d4
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: BottomMargin
+      Id: g=05062da0a2939925aa43267a35bc5b1c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: DynamicColor
+      Id: g=650cc18406f6286aadaefb0b96db17b6
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e4e4e4"
+  - Name: Label1
+    Id: g=836ae4e296fc77f0f9cd657eb8484fe6
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=d861f51caf42b5b1809cb179ce34bdfc
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Boiler"}
+    - Name: HorizontalAlignment
+      Id: g=b6f57bba9e66350aa7d06327a305c355
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=ead071fed40e5211e9f98bddac5fd106
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: BottomMargin
+      Id: g=cffa5a8194d00bb9a03ea39c8fe16619
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+  - Name: MoveTarget
+    Id: g=d5627d49e85cb67254abf9a6c1362d97
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=07cc6dd5dd4f6170526d4e49b9cd1a00
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: DynamicLink
+      Id: g=2cb97b617947b19b07052144056c2c4d
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"
+  - Name: HitTestVisible
+    Id: g=230a90d88117525acf9c0339d44875db
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Label2
+    Id: g=06ae3fceb432b24812f4b1419d242a47
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=d283a1fd5c2cc8fc9616309864b6a46e
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=f7a0fc141fca3d9ef8dd2d19b8aefaf1
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../LeftMargin"
+    - Name: Visible
+      Id: g=849935765158f114d93eaef29d30a63b
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+  - Name: LeftMargin
+    Id: g=4bc77ebb00f2a03d1cecb1e4a328a2a6
+    Type: BaseVariableType
+    DataType: Size
+  - Name: Label3
+    Id: g=e2e51b262546c67efe638da6ad5d5fab
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=14e27fee84d944539d1719664f607e26
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=e466628ba338a78f51a954aabf345e13
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../TopMargin"
+    - Name: Visible
+      Id: g=a72cfc156d759f9116cc429541a2a7de
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+    - Name: LeftMargin
+      Id: g=72a5a3920cc8ae02abd50fc89becf4c9
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=3300f06c91fded7f7c1594a09f80054a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: TopMargin
+    Id: g=97ee465538a212497da250ec95197513
+    Type: BaseVariableType
+    DataType: Size
+- Name: IconTrendTank1
+  Id: g=8097537c899f13181507da890589b09d
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=be480bac3b8b7d5ef33932201a6086be
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: Height
+    Id: g=fba8f84a41403121449a1e8ba3607c42
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: FillColor
+    Id: g=9ee0392832d2a08ee1edc4d8db7ad93a
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#afafaf"
+  - Name: CornerRadius
+    Id: g=38bb26f9b1d0e44c120792c5804cc3b7
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0
+  - Name: Image1
+    Id: g=782c8d3a8ef7c265c055643e2f4f29e1
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=0dbe69a07bce5545bc50c3a9dc0f9cb9
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=40;%PROJECTDIR%/res/timeline_black_24dp.svg"
+    - Name: Width
+      Id: g=078b711b8e2a4f7e33ad301719476776
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=26ac4c4686f5b2f81c67b834b69e71b5
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Id: g=678dd9f65f49b71e4bdf38bc611ba5a3
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=b55198a442680aa23c6801f89d56a3c6
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: BottomMargin
+      Id: g=7565bab61a2e0388b26667309575657c
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: DynamicColor
+      Id: g=5fd89f3c6b8cee4a8d41730e1c32a6e3
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e4e4e4"
+  - Name: Label1
+    Id: g=2dc7bfd6033f73a28ae8855cc16e9496
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=7c7e8f6c5568416ce864b159a925b608
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Tank1"}
+    - Name: HorizontalAlignment
+      Id: g=dbc92caa3ab4071b65dade335f0e2e3a
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=83af67fdc24c0f8379c3407931117306
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: BottomMargin
+      Id: g=f7775f4fbafe122a1d9bacd739edf7ae
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+  - Name: MoveTarget
+    Id: g=7ef1c9f03b4d4d9fe0e2f9394155846f
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=0338411fa19589b4278d93894acd6ff6
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: DynamicLink
+      Id: g=395d26874b11a01dc39aae94dacb65e7
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"
+  - Name: HitTestVisible
+    Id: g=6c1ac308255fd1616b134440bda94040
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Label2
+    Id: g=b501b641ab59943605779a89067c2492
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=7889e815c4ee16dee9e0c20d3f48300a
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=dc73aa9e7697e95e6190b2acd10d2142
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../LeftMargin"
+    - Name: Visible
+      Id: g=e74220878f5dde15c0e4c44b65edbcce
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+  - Name: LeftMargin
+    Id: g=6dea823bb2bf71ba423b96594b4f08ae
+    Type: BaseVariableType
+    DataType: Size
+  - Name: Label3
+    Id: g=1291957e80b07415c15410c0e76efec4
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=60bee271a7b0d49ee1ca128e433d5399
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=2d2e391f0734cbd30fd955ed9e9af78b
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../TopMargin"
+    - Name: Visible
+      Id: g=004439ebdc874802f8579c4203aad7f5
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+    - Name: LeftMargin
+      Id: g=c08ead51bc426d8c937e2a00a2e4df09
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=eba8b98cd9c0ae06ee467cc769e7df5f
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: TopMargin
+    Id: g=b19be7703aed31acf864a2e7b7b64ed4
+    Type: BaseVariableType
+    DataType: Size
+- Name: IconTrendTank2
+  Id: g=375a995fcca923203e438b71a62864c9
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=ee6f4c9fb770a01578c654b5ac140394
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: Height
+    Id: g=0043208b1516bf29d3a8847791dd759f
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: FillColor
+    Id: g=adf4210f52a0ae591b9f11cc86e8475a
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#afafaf"
+  - Name: CornerRadius
+    Id: g=761f64a3f208170d152a763af272eba4
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0
+  - Name: Image1
+    Id: g=d8586439bd5cfa8d10a3fbd6ea4a5957
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=80c4107e0f1131df92249bb2c6c518be
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=40;%PROJECTDIR%/res/timeline_black_24dp.svg"
+    - Name: Width
+      Id: g=910ef1639607011e2b0359867c943689
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=c5b486f843aa02f97595fc0544e9f2c3
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Id: g=ff5d464c0547a26392f7ed23b2d22401
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=96c7e568b548ae5e5dcdfc0dff26d7ed
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: BottomMargin
+      Id: g=4054567cd6f710c0b670d7ef303d75cf
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: DynamicColor
+      Id: g=689dd2b8e48124974fd10bce605be60d
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e4e4e4"
+  - Name: Label1
+    Id: g=6308bbd8706e67ace10e76a657d42259
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=ad21695feda203e4dbda97db66a960df
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Tank2"}
+    - Name: HorizontalAlignment
+      Id: g=9e330b5111b9c13aa56e8a91afaa5e80
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=cd96cf79534451fd11ae419047e78da0
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: BottomMargin
+      Id: g=30342c5fb0d1da8ee323d9f08299a5f0
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+  - Name: MoveTarget
+    Id: g=d4341123ee2ec728a786be3cfec38521
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=5a3faae2ffd1bd9508c0a071196f1206
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: DynamicLink
+      Id: g=b58aadc1d2557f58a400e3d77c6e95e1
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"
+  - Name: HitTestVisible
+    Id: g=1be8e77ac1023bda425bb905286f8686
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Label2
+    Id: g=87dd413ae3abe4a5e8eeb62536a0e7c1
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=7edd04009e864c4320b4325681565925
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=53073901f30cb4eb67b7e458fa8a1079
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../LeftMargin"
+    - Name: Visible
+      Id: g=25834c9beec478875c38c98d339b87c1
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+  - Name: LeftMargin
+    Id: g=f84587a9503b24871813b6f7c183d3e3
+    Type: BaseVariableType
+    DataType: Size
+  - Name: Label3
+    Id: g=d5f47cce414195f53a7ab820b2039173
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=5be19f2ea5f65bef54bd0aef0372513d
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=89c88189ae72f84fe1b6157c74516725
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../TopMargin"
+    - Name: Visible
+      Id: g=20c93f3816d4d327a45ef6fb4e521274
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+    - Name: LeftMargin
+      Id: g=8e4bdf564c216914425a53d8405c013d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=93fb0ba0d40b4943fca3cbe5a876b2a7
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: TopMargin
+    Id: g=3070bf9a86af07a04106e4cbfb076924
+    Type: BaseVariableType
+    DataType: Size
+- Name: IconTrendBoiler
+  Id: g=b7ac0e82969b51399c723a489ccd1f2f
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=fe4f9811d36f8d1d223afeb20e7be693
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: Height
+    Id: g=764af95c8b8b6ae625e530fc01419515
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 75.0
+  - Name: FillColor
+    Id: g=f115178b72fb6a3644475a6904227810
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#afafaf"
+  - Name: CornerRadius
+    Id: g=8c77a483f7e3935795686454e7be42dc
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 5.0
+  - Name: Image1
+    Id: g=266c22dca789f4011b5f7c7efe4e500a
+    Type: Image
+    Children:
+    - Name: Path
+      Id: g=9e792284dbebe39ad59e57bc7fc25fb7
+      Type: BaseDataVariableType
+      DataType: ResourceUri
+      Value: "ns=40;%PROJECTDIR%/res/timeline_black_24dp.svg"
+    - Name: Width
+      Id: g=49e9c6a0727441d4ac6bb46e3b2b35a7
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Id: g=13ab849fd787c1096c59d880bdaa318a
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: HorizontalAlignment
+      Id: g=8b756a7fda76e5dc3dc223e8a046d57e
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: VerticalAlignment
+      Id: g=0a8a565d35042aef276133e7ccd99da1
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: BottomMargin
+      Id: g=4d29067f25b9904d4b34147ad8393773
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: DynamicColor
+      Id: g=3d7fa167ac5bd556304bb14c892751eb
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#e4e4e4"
+  - Name: Label1
+    Id: g=06db20a9d4071252a933882056c58e04
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=c1e9d7876167af2112584ed7221725b7
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      ModellingRule: Optional
+      Value: {"LocaleId":"en-US","Text":"Boiler"}
+    - Name: HorizontalAlignment
+      Id: g=b2fcf4b32e1d5cf0d68cb688ceaf044f
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 2
+    - Name: VerticalAlignment
+      Id: g=d35d06f1a7e6361e4d093991286b147b
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+    - Name: BottomMargin
+      Id: g=fea831ecef08d5939c7a3fdb5329a4de
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 5.0
+  - Name: MoveTarget
+    Id: g=8ca0ec79ca8ec4e04c8819a56b527206
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=1f875d8d1e16ee3d3af1bd6bd525bef8
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: DynamicLink
+      Id: g=2003c634e29164345bc97521b6def099
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "..@NodeId"
+  - Name: HitTestVisible
+    Id: g=647152e074843222f421a0b7c4e41497
+    Type: BaseDataVariableType
+    DataType: Boolean
+    ModellingRule: Optional
+    Value: true
+  - Name: Label2
+    Id: g=f5f80f9b7ee959b567026e8bd734c1f4
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=47c64cf8e32cded2d45d0c7ce0e9492a
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=1fb8f40bc83637ea2b949b087f2fc6e7
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../LeftMargin"
+    - Name: Visible
+      Id: g=3da5a21f12eaf68d17d9a653b3324d31
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+  - Name: LeftMargin
+    Id: g=245794137ff3757d6aab8d091e602cbd
+    Type: BaseVariableType
+    DataType: Size
+  - Name: Label3
+    Id: g=736a9b8dc2d94cc6a4eae4c5ca4ce5d7
+    Type: Label
+    Children:
+    - Name: Text
+      Id: g=13c3826756d8a40e11ab92faf3b84037
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Children:
+      - Name: DynamicLink
+        Id: g=5e4f6031286a282c4fb689207bd9b518
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../../TopMargin"
+    - Name: Visible
+      Id: g=0b4253c5f4ec7f509ac8ef17589d3de2
+      Type: BaseDataVariableType
+      DataType: Boolean
+      ModellingRule: Optional
+    - Name: LeftMargin
+      Id: g=84bcc3610477875c051e9c782cb21025
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: TopMargin
+      Id: g=b1365165a09c75561921d7877c1c410d
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 10.0
+  - Name: TopMargin
+    Id: g=050cb9bc61b6268f2ac88548cc3fd7eb
+    Type: BaseVariableType
+    DataType: Size

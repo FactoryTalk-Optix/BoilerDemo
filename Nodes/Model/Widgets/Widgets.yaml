@@ -1,0 +1,24 @@
+Name: Widgets
+Id: g=546bea1eddb8f2d55f3a47eebb850d16
+Type: FolderType
+Children:
+- Name: UserWidget
+  Id: g=1436f4cc80f73504cb0e33a24548d02c
+  Supertype: BaseObjectType
+  Children:
+  - Name: WidgetBrowseName
+    Id: g=d7d08b0911f0de1357aeaff59ba35b90
+    Type: BaseDataVariableType
+    DataType: String
+  - Name: WidgetTopMargin
+    Id: g=dcad80717edacc3b3ae025f371bbfaa3
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: WidgetLeftMargin
+    Id: g=8e3e5bfe857346e464850fa0d242020d
+    Type: BaseDataVariableType
+    DataType: Float
+  - Name: WidgetType
+    Id: g=56bffbfbc6bc8cb3459d3b0b857ad774
+    Type: BaseDataVariableType
+    DataType: NodeId

@@ -42,3 +42,6 @@ Children:
   - Class: Method
     Name: Demo
     Id: g=da4d3b264fc6afa219b6d069d6d18638
+- Name: RecipesCreation
+  Id: g=5d76ea6b596ae90e3ffc61308b38b543
+  Type: NetLogic

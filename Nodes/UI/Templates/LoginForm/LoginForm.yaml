@@ -1,0 +1,197 @@
+Name: LoginForm
+Id: g=d052d8422984e2cc819bc3828a384c89
+Type: FolderType
+Children:
+- Name: LoginFormWithBackground
+  Id: g=5eba7a9c442759e657c62fbec3505502
+  Supertype: Rectangle
+  ReferenceType: HasComponent
+  Children:
+  - Name: Width
+    Id: g=d88a952480e909671caf5a9da99ba73d
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Id: g=8342aab3fe9d18bdd14287a91949328a
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 350.0
+  - Name: BorderThickness
+    Id: g=eb461ea873eacfb1413e3b757f2ce198
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 1.0
+  - Name: FillColor
+    Id: g=b9f5fdc8d877a275f80ed824782937d1
+    Type: BaseDataVariableType
+    DataType: Color
+    ModellingRule: Optional
+    Value: "#f0f0f0"
+  - Name: LoginForm
+    Id: g=c5a37d0e36294dbd6447f9f92c206e44
+    Type: LoginForm
+    Children:
+    - Name: Panel
+      Id: g=c183982aa9a586186092c8aaaef64ca0
+      Type: NodePointer
+      DataType: NodeId
+      Children:
+      - Name: Kind
+        Id: g=0a1810b57241ce58e34a0654fa01cfd6
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: ConditionalConverter1
+        Id: g=0203b19749b638346b5f4488ff2f5f59
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Id: g=bff91a741a5d9d4da75fccc814fde661
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Id: g=f0f33451efd321aedfba202ee7ede4df
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/LoggedIn"
+    - Name: CurrentPanel
+      Id: g=c52e3a565254656594b2be6801879892
+      Type: NodePointer
+      DataType: NodeId
+      AccessLevel: Read
+      Children:
+      - Name: Kind
+        Id: g=3012e3cc2a0aa14a7035f51fe8a51f4a
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+    - Class: Reference
+      Target: ns=13;i=478
+      Direction: Forward
+    - Name: Users
+      Id: g=61b24c0b580dc6875c8c93cf0a7d68d5
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/BoilerDemo/Security/Users"
+      Children:
+      - Name: Kind
+        Id: g=a14bcd0996ed0559f1dd6591490e5480
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+    - Name: PanelAliasNode
+      Id: g=278b35c9a24f4d80f5accfb44f95e5f3
+      Type: BaseDataVariableType
+      DataType: NodeId
+      ValueRank: ScalarOrOneDimension
+      Children:
+      - Name: DynamicLink
+        Id: g=d090009a3ccb36fb774826b8e10279ea
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../Users@NodeId"
+    - Name: VerticalAlignment
+      Id: g=ca7f9c5ec3fd385fc07d4923682d536c
+      Type: BaseVariableType
+      DataType: VerticalAlignment
+      ModellingRule: Optional
+      Value: 1
+- Name: LoginForm
+  Id: g=d0fba00ff93f064d6e1cb546eea27209
+  Supertype: PanelLoader
+  ReferenceType: HasComponent
+  Children:
+  - Name: Panel
+    Id: g=2043d80b352594a6d2a8d510c6f9275b
+    Type: NodePointer
+    DataType: NodeId
+    Children:
+    - Name: Kind
+      Id: g=b296bb36f7ee9bb2a7fd8521ba842e55
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+    - Name: ConditionalConverter1
+      Id: g=568657c20845da93e5ec0656194ae19c
+      Type: ConditionalConverter
+      Children:
+      - Name: Condition
+        Id: g=02e26ea14f2ac07b41f60b7bbf8330ef
+        Type: BaseDataVariableType
+        DataType: Boolean
+        ReferenceType: HasSource
+        Children:
+        - Name: DynamicLink
+          Id: g=166f096194700001a1ae0f2a51edb8d7
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/LoggedIn"
+      - Name: TrueValue
+        Id: g=a110d8a71997313fe7397114aac418bd
+        Type: BaseDataVariableType
+        DataType: NodeId
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+        Value: "/Objects/BoilerDemo/UI/Templates/LoginForm/LoginFormComponents/Logout"
+      - Name: FalseValue
+        Id: g=ecd2537f1a45bbf9df2e6f8a0fe5b21f
+        Type: BaseDataVariableType
+        DataType: NodeId
+        ReferenceType: HasParameter
+        ModellingRule: Optional
+        Value: "/Objects/BoilerDemo/UI/Templates/LoginForm/LoginFormComponents/Login"
+  - Name: CurrentPanel
+    Id: g=205f0b10b1a0dfcc8c114034954ef552
+    Type: NodePointer
+    DataType: NodeId
+    AccessLevel: Read
+    Children:
+    - Name: Kind
+      Id: g=c78e2a06ffcb2f4e5e646b82adb8bf4b
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+  - Class: Reference
+    Target: ns=13;i=478
+    Direction: Forward
+  - Name: Width
+    Id: g=a4aac1d956116089ad90b9f7249aac4e
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Height
+    Id: g=4f9bda2df3ef056f0bb816583e901eca
+    Type: BaseVariableType
+    DataType: Size
+    ModellingRule: Optional
+    Value: 300.0
+  - Name: Users
+    Id: g=c8c9b0a331a581d7ad3723183b1782f5
+    Type: NodePointer
+    DataType: NodeId
+    Value: "/Objects/BoilerDemo/Security/Users"
+    Children:
+    - Name: Kind
+      Id: g=6656ed4c789a3996179f5c11f2fc6e23
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+  - Name: PanelAliasNode
+    Id: g=8827b086b1ce667160271206ae0890e4
+    Type: BaseDataVariableType
+    DataType: NodeId
+    ValueRank: ScalarOrOneDimension
+    Children:
+    - Name: DynamicLink
+      Id: g=ed60e8e4f8682c1d302dc3ffcefeb9f5
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../Users@NodeId"
+- File: LoginFormComponents/LoginFormComponents.yaml

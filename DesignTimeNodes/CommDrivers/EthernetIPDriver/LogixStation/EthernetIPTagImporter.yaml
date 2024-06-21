@@ -7,7 +7,6 @@ Children:
   Id: g=391ec42da7ca662f177c1cf99921ffba
   Type: BaseDataVariableType
   DataType: AbsoluteResourceUri
-  Value: ""
 - Name: Mode
   Id: g=1eade97b802dfb52e5dd63b672884d2c
   Type: BaseDataVariableType
@@ -25,4 +24,3 @@ Children:
   DataType: NodeId
   ValueRank: OneDimension
   ArrayDimensions: [0]
-  Value: []

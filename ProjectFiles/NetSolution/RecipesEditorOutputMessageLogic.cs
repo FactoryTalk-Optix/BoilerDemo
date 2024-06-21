@@ -3,25 +3,30 @@ using FTOptix.HMIProject;
 using FTOptix.NetLogic;
 using System;
 using UAManagedCore;
-using FTOptix.RAEtherNetIP;
 #endregion
 
-public class RecipesEditorOutputMessageLogic : BaseNetLogic {
-    public override void Start() {
+public class RecipesEditorOutputMessageLogic : BaseNetLogic
+{
+    public override void Start()
+    {
         messageVariable = Owner.GetVariable("Message");
         if (messageVariable == null)
             throw new ArgumentNullException("Unable to find variable Message in OutputMessage label");
     }
 
-    public override void Stop() {
-        lock (lockObject) {
+    public override void Stop()
+    {
+        lock (lockObject)
+        {
             task?.Dispose();
         }
     }
 
     [ExportMethod]
-    public void SetOutputMessage(string message) {
-        lock (lockObject) {
+    public void SetOutputMessage(string message)
+    {
+        lock (lockObject)
+        {
             task?.Dispose();
 
             messageVariable.Value = message;
@@ -31,7 +36,8 @@ public class RecipesEditorOutputMessageLogic : BaseNetLogic {
     }
 
     [ExportMethod]
-    public void SetOutputLocalizedMessage(LocalizedText message) {
+    public void SetOutputLocalizedMessage(LocalizedText message)
+    {
         SetOutputMessage(InformationModel.LookupTranslation(message).Text);
     }
 

@@ -1,25 +1,6 @@
 #region Using directives
-using System;
-using UAManagedCore;
-using OpcUa = UAManagedCore.OpcUa;
-using FTOptix.HMIProject;
-using FTOptix.Alarm;
 using FTOptix.NetLogic;
-using FTOptix.NativeUI;
-using FTOptix.UI;
-using FTOptix.WebUI;
-using FTOptix.Recipe;
-using FTOptix.DataLogger;
-using FTOptix.EventLogger;
-using FTOptix.SQLiteStore;
-using FTOptix.Store;
-using FTOptix.OPCUAClient;
-using FTOptix.OPCUAServer;
-using FTOptix.RAEtherNetIP;
-using FTOptix.CoreBase;
-using FTOptix.CommunicationDriver;
-using FTOptix.Core;
-using FTOptix.RAEtherNetIP;
+using UAManagedCore;
 #endregion
 
 /*
@@ -49,7 +30,7 @@ using FTOptix.RAEtherNetIP;
  *  2. Web IDE
  *      - Open project from remote
  *          Show that no authentication is required as it is already stored in FTRA account
- *      - Add BoilerWidget, Tank1 and Tank2 instances
+ *      - Add BoilerWidget, Tank1 and Tank2 instances to MainPage/Content
  *          Highlight that these widgets were custom built
  *          Optional: show TemplateLibrary
  *      - Link widgets aliases to MainPage aliases

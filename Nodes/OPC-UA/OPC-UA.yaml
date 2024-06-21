@@ -19,9 +19,12 @@ Children:
     Id: g=35a7a588cfa8e0f360f61e2f778b5f7c
     Type: PropertyType
     DataType: ns=9;MessageSecurityModeEnum
-    Value: 0
   - Name: MinimumSecurityPolicy
     Id: g=998e4fe1f0f2d3d2a5387a72da203d14
     Type: PropertyType
     DataType: ns=9;SecurityPolicyEnum
-    Value: 0
+  - Name: MaxNumberOfConnections
+    Id: g=ffcaf11d483e5f15c352d7644a6df9b2
+    Type: BaseDataVariableType
+    DataType: UInt32
+    Value: 50

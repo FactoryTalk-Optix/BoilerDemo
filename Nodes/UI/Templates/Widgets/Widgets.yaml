@@ -1,0 +1,6 @@
+Name: Widgets
+Id: g=228902aad328f87ee83dfc31031d4c45
+Type: FolderType
+Children:
+- File: Preview/Preview.yaml
+- File: Components/Components.yaml
