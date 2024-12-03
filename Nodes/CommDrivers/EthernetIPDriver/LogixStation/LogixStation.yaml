@@ -6,12 +6,12 @@ Children:
   Id: g=1e0b1a01ddfca08c597e44e43b0f47d2
   Type: BaseDataVariableType
   DataType: String
-  Value: "172.19.17.10"
+  Value: "172.19.20.28"
 - Name: Timeout
   Id: g=6216a9670a93430167395c58121c92c5
   Type: BaseDataVariableType
   DataType: Duration
-  Value: "0:00:01:0.0000000"
+  Value: "0:00:01:00.0000000"
 - Name: OperationCode
   Id: g=1c76a56a3de81e821905367d062c05fd
   Type: BaseDataVariableType

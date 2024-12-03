@@ -5,34 +5,16 @@ Project:
  Company: ''
  Copyright: ''
  FormatVersion: 1
- ProductVersion: 1.4
- CoreVersion: 3.0
+ ProductVersion: 1.5
+ CoreVersion: 4.0
  Dependencies:
   2:
    Uri: BoilerDemo
    RelativePath: BoilerDemo.optix
-  3:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC553.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  4:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://opcfoundation.org/UA/DI/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  5:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://PLCopen.org/OpcUa/IEC61131-3/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  6:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://www.unifiedautomation.com/DemoServer/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  7:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC508.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  8:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:bm100:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
   9:
    Uri: 'urn:FTOptix:Core:Net'
    Module: FTOptix.Core.Net
-   Version: 1.2
+   Version: 2.0
   10:
    Uri: 'urn:FTOptix:CoreBase'
    Module: FTOptix.CoreBase
@@ -56,16 +38,7 @@ Project:
   15:
    Uri: 'urn:FTOptix:NetLogic'
    Module: FTOptix.NetLogic
-   Version: 3.0
-  17:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:DESKTOP-NGN08CH:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  18:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:DESKTOP-VUVES76:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  19:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC457.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+   Version: 4.0
  Statistics:
   TotalNodeCount: 9
   Objects: 2

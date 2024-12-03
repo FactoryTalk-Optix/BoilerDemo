@@ -1,4 +1,5 @@
 #region Using directives
+using FTOptix.Alarm;
 using FTOptix.NetLogic;
 using FTOptix.UI;
 using System.Linq;
@@ -20,15 +21,14 @@ public class AlarmsLedLogic : BaseNetLogic
         // Insert code to be executed when the user-defined logic is stopped
         alarmCheck?.Dispose();
     }
-
     private void AlarmIconHandler()
     {
         IContext context = LogicObject.Context;
         // Get list of alarms from LocalizedAlarms
         var retainedAlarms = context.GetNode(FTOptix.Alarm.Objects.RetainedAlarms);
-        var alarmsObjects = ((UAManagedCore.UANode)retainedAlarms).Children[1].Children;
+        var alarmsObjects = ((UAManagedCore.UANode)retainedAlarms).Children?.FirstOrDefault(t => t.BrowseName == "en-US")?.Children;
         // Check for severity
-        if (alarmsObjects.Any())
+        if (alarmsObjects?.Any() == true)
         {
             NotificationIcon.Visible = true;
             if (alarmsObjects.Any(t => t.GetVariable("Severity").Value >= 100))

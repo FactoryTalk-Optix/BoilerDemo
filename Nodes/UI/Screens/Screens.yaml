@@ -7427,7 +7427,7 @@ Children:
           Type: BaseDataVariableType
           DataType: Duration
           ModellingRule: Optional
-          Value: "0:00:00:1.0000000"
+          Value: "0:00:00:01.0000000"
         - Name: SortColumn
           Id: g=fa2e74e4f1d124946626b0d6ba42bcf2
           Type: BaseDataVariableType
@@ -7628,7 +7628,7 @@ Children:
               Id: g=dcffff1758ef0d08238c453d5345b0fd
               Type: BaseDataVariableType
               DataType: Duration
-              Value: "0:00:05:0.0000000"
+              Value: "0:00:05:00.0000000"
             - Name: Interactive
               Id: g=cdb690c01fb8ce0029cb5ee6802e8c3c
               Type: BaseDataVariableType
@@ -7885,7 +7885,7 @@ Children:
               Id: g=cade2e635d7cd02a0a63854f6a341e08
               Type: BaseDataVariableType
               DataType: Duration
-              Value: "0:00:05:0.0000000"
+              Value: "0:00:05:00.0000000"
             - Name: Interactive
               Id: g=634fad8567990e7c6e16243cf14cc666
               Type: BaseDataVariableType
@@ -10427,7 +10427,7 @@ Children:
           Type: BaseDataVariableType
           DataType: Duration
           ModellingRule: Optional
-          Value: "0:00:00:1.0000000"
+          Value: "0:00:00:01.0000000"
         - Name: SortColumn
           Id: g=55ca94536c98e8ab7be1786a77c81080
           Type: BaseDataVariableType
@@ -10747,7 +10747,7 @@ Children:
           Type: BaseDataVariableType
           DataType: Duration
           ModellingRule: Optional
-          Value: "0:00:00:1.5000000"
+          Value: "0:00:00:01.5000000"
         - Name: SortColumn
           Id: g=dee479d9a2545317e991d07e718e6407
           Type: BaseDataVariableType
@@ -11279,7 +11279,7 @@ Children:
             Id: g=31543a099e8df08f5426e3365a6edb16
             Type: BaseDataVariableType
             DataType: Duration
-            Value: "0:00:05:0.0000000"
+            Value: "0:00:05:00.0000000"
           - Name: Interactive
             Id: g=1bbf3adb213844d3c144b63e30530900
             Type: BaseDataVariableType
@@ -13767,7 +13767,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Duration
         ModellingRule: Optional
-        Value: "0:00:00:1.0000000"
+        Value: "0:00:00:01.0000000"
     - Name: HorizontalAlignment
       Id: g=0c1312c9ebfa9ebca57e50fb8fb49676
       Type: BaseVariableType
@@ -13933,7 +13933,7 @@ Children:
     - Name: ImagePosition
       Id: g=2331ede58611094678188fc6066aefd9
       Type: BaseDataVariableType
-      DataType: Position
+      DataType: ButtonImagePosition
       ModellingRule: Optional
       Value: 3
     - Name: TextPosition

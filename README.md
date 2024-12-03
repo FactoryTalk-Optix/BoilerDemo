@@ -30,17 +30,20 @@ Both applications must be loaded and running in separate instances of FactoryTal
 
 ## Explore the project:
 
-1. Once the application is loaded, start the Emulator by clicking on the `Play` button
+1. Once the application is loaded, start the Emulator by clicking on the `Play` button of the IDE
 2. Once the application is running in the emulator, click on the following buttons and valves located on the main boiler screen:
-               1. Click on the `wave` icon under the boiler to Fill the boiler
-               2. Click on the `heat` icon under the boiler to heat the boiler
-               3. Click on the `snowflake` icon under the boiler to cool the boiler
-               4. Open valve `EV101`
-               5. Open valve `EV102`
-               6. Open valve `EV201`
-               7. Open valve `EV202`
+    1. Click on the `wave` icon under the boiler to Fill the boiler
+    2. Click on the `heat` icon under the boiler to heat the boiler
+    3. Click on the `snowflake` icon under the boiler to cool the boiler
+    4. Open valve `EV101`
+    5. Open valve `EV102`
+    6. Open valve `EV201`
+    7. Open valve `EV202`
 3. When a tank is empty, an alarm is generated.
 
+Additional logics are also added to the pump in the `Dashboard` page, this faceplate allows manual control of the pump, causing an overpressure alarm to be triggered.
+
+A dashboard page also provides user-based dashboards, where widgets and their positioning are stored as user properties, and gets restored at every login of that user.
 
 ## Description
 

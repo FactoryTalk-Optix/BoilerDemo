@@ -6,31 +6,16 @@ Project:
  Company: ''
  Copyright: ''
  FormatVersion: 1
- ProductVersion: 1.4
- CoreVersion: 3.0
+ ProductVersion: 1.5
+ CoreVersion: 4.0
  Dependencies:
-  2:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC553.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  3:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://opcfoundation.org/UA/DI/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  4:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://PLCopen.org/OpcUa/IEC61131-3/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
   5:
    Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#http://www.unifiedautomation.com/DemoServer/'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  6:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC508.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  7:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:bm100:UnifiedAutomation:UaDemoServerAnsiC'
    ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
   8:
    Uri: 'urn:FTOptix:Core:Net'
    Module: FTOptix.Core.Net
-   Version: 1.2
+   Version: 2.0
   9:
    Uri: 'urn:FTOptix:OPCUAServer'
    Module: FTOptix.OPCUAServer
@@ -50,19 +35,19 @@ Project:
   13:
    Uri: 'urn:FTOptix:UI'
    Module: FTOptix.UI
-   Version: 12.4
+   Version: 14.2
   14:
    Uri: 'urn:FTOptix:UI:Net'
    Module: FTOptix.UI.Net
-   Version: 12.4
+   Version: 14.2
   15:
    Uri: 'urn:FTOptix:HMIProject'
    Module: FTOptix.HMIProject
-   Version: 6.1
+   Version: 6.5
   16:
    Uri: 'urn:FTOptix:HMIProject:Net'
    Module: FTOptix.HMIProject.Net
-   Version: 4.4
+   Version: 4.8
   17:
    Uri: 'urn:FTOptix:EventLogger'
    Module: FTOptix.EventLogger
@@ -90,7 +75,7 @@ Project:
   23:
    Uri: 'urn:FTOptix:Alarm'
    Module: FTOptix.Alarm
-   Version: 4.0
+   Version: 6.0
   24:
    Uri: 'urn:FTOptix:Alarm:Net'
    Module: FTOptix.Alarm.Net
@@ -98,7 +83,7 @@ Project:
   25:
    Uri: 'urn:FTOptix:NativeUI'
    Module: FTOptix.NativeUI
-   Version: 2.0
+   Version: 2.1
   26:
    Uri: 'urn:FTOptix:NativeUI:Net'
    Module: FTOptix.NativeUI.Net
@@ -106,11 +91,11 @@ Project:
   27:
    Uri: 'urn:FTOptix:OPCUAClient'
    Module: FTOptix.OPCUAClient
-   Version: 1.2
+   Version: 1.3
   28:
    Uri: 'urn:FTOptix:OPCUAClient:Net'
    Module: FTOptix.OPCUAClient.Net
-   Version: 1.1
+   Version: 1.2
   29:
    Uri: 'urn:FTOptix:Store'
    Module: FTOptix.Store
@@ -130,49 +115,40 @@ Project:
   33:
    Uri: 'urn:FTOptix:CommunicationDriver'
    Module: FTOptix.CommunicationDriver
-   Version: 2.1
+   Version: 3.0
   34:
    Uri: 'urn:FTOptix:CommunicationDriver:Net'
    Module: FTOptix.CommunicationDriver.Net
-   Version: 2.1
+   Version: 3.0
   35:
    Uri: 'urn:FTOptix:NetLogic'
    Module: FTOptix.NetLogic
-   Version: 3.0
+   Version: 4.0
   36:
    Uri: 'urn:FTOptix:WebUI'
    Module: FTOptix.WebUI
-   Version: 1.1
+   Version: 1.2
   37:
    Uri: 'urn:FTOptix:WebUI:Net'
    Module: FTOptix.WebUI.Net
-   Version: 1.1
+   Version: 1.2
   38:
    Uri: 'urn:FTOptix:RAEtherNetIP'
    Module: FTOptix.RAEtherNetIP
-   Version: 3.0
+   Version: 6.3
   39:
    Uri: 'urn:FTOptix:RAEtherNetIP:Net'
    Module: FTOptix.RAEtherNetIP.Net
-   Version: 2.1
-  41:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:DESKTOP-NGN08CH:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  42:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:DESKTOP-VUVES76:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
-  43:
-   Uri: '9f78eb2f1f373feb2ad5ccb7e29a5e21#urn:ASPC457.asem.intra:UnifiedAutomation:UaDemoServerAnsiC'
-   ServerUri: 9f78eb2f1f373feb2ad5ccb7e29a5e21
+   Version: 2.2
  Statistics:
-  TotalNodeCount: 9087
+  TotalNodeCount: 9089
   Objects: 1831
   ObjectTypes: 68
-  Variables: 7155
+  Variables: 7157
   VariableTypes: 1
   DataTypes: 2
   Methods: 30
-  References: 158
+  References: 193
   ReferenceTypes: 0
   Files: 41
  Nodes:

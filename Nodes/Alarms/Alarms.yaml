@@ -61,6 +61,21 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 10
+  - Class: Reference
+    Target: ns=23;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=154
+    Direction: Forward
 - Name: LowLevelTank2
   Id: g=1a3b2a18e132cdffc499702b79c86ca9
   Type: ExclusiveLevelAlarmController
@@ -120,6 +135,21 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 10
+  - Class: Reference
+    Target: ns=23;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=154
+    Direction: Forward
 - Name: LowLevelBoiler
   Id: g=002e57dac91dbd80913ed7c631d28d0f
   Type: ExclusiveLevelAlarmController
@@ -179,6 +209,21 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 10
+  - Class: Reference
+    Target: ns=23;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=154
+    Direction: Forward
 - Name: EthernetIpStation
   Id: g=87db76f9d91999597081ceb11441eafc
   Type: OffNormalAlarmController
@@ -247,6 +292,21 @@ Children:
     Direction: Forward
   - Class: Reference
     Target: ns=23;i=135
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=154
     Direction: Forward
 - Name: OpcUaStation
   Id: g=78b3cc28e87eae5230dc96e6679803c3
@@ -322,6 +382,21 @@ Children:
   - Class: Reference
     Target: ns=23;i=135
     Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=154
+    Direction: Forward
 - Name: PumpJogginMode
   Id: g=614aacac44556c10c4f1f20cc73ddadc
   Type: OffNormalAlarmController
@@ -390,6 +465,21 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 1
+  - Class: Reference
+    Target: ns=23;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=154
+    Direction: Forward
 - Name: PumpOverpressure
   Id: g=df550e16b75918c5372d048822ac747d
   Type: OffNormalAlarmController
@@ -453,3 +543,18 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt16
     Value: 100
+  - Class: Reference
+    Target: ns=23;i=146
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=148
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=150
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=152
+    Direction: Forward
+  - Class: Reference
+    Target: ns=23;i=154
+    Direction: Forward

@@ -902,6 +902,16 @@ Children:
         Type: BaseDataVariableType
         DataType: String
         AccessLevel: Read
+      - Name: StyleSheet
+        Id: g=b5484a2f8dd23c39f6eec3c3670bec54
+        Type: NodePointer
+        DataType: NodeId
+        Children:
+        - Name: Kind
+          Id: g=4963af94fc4e41de62928d24f9e08d94
+          Type: PropertyType
+          DataType: NodeId
+          Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
   - Name: MaxNumberOfConnections
     Id: g=ad079ca864203168380d19c60a614283
     Type: BaseDataVariableType

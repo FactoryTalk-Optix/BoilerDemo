@@ -103,7 +103,7 @@ Children:
         Id: g=76d0ac6a0dcdf61286f16483a3894787
         Type: BaseDataVariableType
         DataType: Duration
-        Value: "0:00:00:5.0000000"
+        Value: "0:00:00:05.0000000"
       - Name: Interactive
         Id: g=3f94c3a4f357622ff0f406a1dab1e68a
         Type: BaseDataVariableType
@@ -470,7 +470,7 @@ Children:
         Id: g=a17c22552ce43107064010aa58829433
         Type: BaseDataVariableType
         DataType: Duration
-        Value: "0:00:00:5.0000000"
+        Value: "0:00:00:05.0000000"
       - Name: Interactive
         Id: g=ee10b5ae0b454429a6e1c495758ca7e0
         Type: BaseDataVariableType
@@ -831,7 +831,7 @@ Children:
         Id: g=b27217b38c25ffcbd06f62742171a551
         Type: BaseDataVariableType
         DataType: Duration
-        Value: "0:00:00:5.0000000"
+        Value: "0:00:00:05.0000000"
       - Name: Interactive
         Id: g=d0d7887bae8644ddb8cf97b7bcb2fcc3
         Type: BaseDataVariableType

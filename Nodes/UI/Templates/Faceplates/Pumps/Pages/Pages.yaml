@@ -1601,7 +1601,7 @@ Children:
       Type: BaseDataVariableType
       DataType: Duration
       ModellingRule: Optional
-      Value: "0:00:00:0.1000000"
+      Value: "0:00:00:00.1000000"
     - Name: RangeHigh
       Id: g=bd90233bee5001cdec3ed9f5900e410e
       Type: BaseDataVariableType
