@@ -559,12 +559,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 50.0
-    - Name: BorderThickness
-      Id: g=7ae79997bfedfac2be67c4eb4a9679b6
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
     - Name: FillColor
       Id: g=ebd3e598a9d760898374c59094419a8a
       Type: BaseDataVariableType

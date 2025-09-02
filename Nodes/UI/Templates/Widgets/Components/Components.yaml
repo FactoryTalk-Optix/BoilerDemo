@@ -19,12 +19,6 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 256.0
-  - Name: BorderThickness
-    Id: g=9d9442cda2cb99ad5186ff67f4db3b8d
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 1.0
   - Name: CornerRadius
     Id: g=36fd9b243cbdba06aaf87bba481bca8c
     Type: BaseDataVariableType
@@ -386,12 +380,6 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 256.0
-  - Name: BorderThickness
-    Id: g=d50e6b8e60e7be84c1dd74c245b89df6
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 1.0
   - Name: CornerRadius
     Id: g=893e6f442517c612e1d6785f201b66a7
     Type: BaseDataVariableType
@@ -747,12 +735,6 @@ Children:
     DataType: Size
     ModellingRule: Optional
     Value: 256.0
-  - Name: BorderThickness
-    Id: g=0801de6d0f490ff402ea554612e856e1
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 1.0
   - Name: CornerRadius
     Id: g=1c41c783f5c903bbc3ec3812a0b5452d
     Type: BaseDataVariableType
@@ -1658,12 +1640,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 14.0
-  - Name: BorderThickness
-    Id: g=6f9017699dd68cf781b7321ffab34edd
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 1.0
   - Name: DeleteWidgetFromUser
     Id: g=52cea274938650601476b54ad8932608
     Type: NetLogic
@@ -2352,12 +2328,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 14.0
-  - Name: BorderThickness
-    Id: g=8c8883ff51fff5d1454f8065ea744667
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 1.0
   - Name: DeleteWidgetFromUser
     Id: g=4434522f06bc1a69509090511819b9ea
     Type: NetLogic
@@ -3046,12 +3016,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 14.0
-  - Name: BorderThickness
-    Id: g=5b9a0e4e2db7631f2b31303df89c7f6d
-    Type: BaseDataVariableType
-    DataType: Size
-    ModellingRule: Optional
-    Value: 1.0
   - Name: DeleteWidgetFromUser
     Id: g=e7213618bda1337dd8282b04e8f23582
     Type: NetLogic

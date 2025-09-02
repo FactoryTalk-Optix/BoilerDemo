@@ -8,39 +8,33 @@ Children:
 - Name: ns=5;Boiler1
   Id: ns=5;s=Demo.BoilerDemo.Boiler1
   Type: BoilerType
-  DisplayName: {"LocaleId":"","Text":"Boiler1"}
   ReferenceType: Organizes
   Children:
   - Class: Method
     Name: ns=5;Fill
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.Fill
-    DisplayName: {"LocaleId":"","Text":"Fill"}
     Children:
     - Name: ns=0;InputArguments
       Id: ns=5;i=6032
       Type: PropertyType
       DataType: Argument
-      DisplayName: {"LocaleId":"","Text":"InputArguments"}
       ValueRank: OneDimension
       ArrayDimensions: [1]
       Value: [{"TypeId":{"Id":296},"Body":{"Name":"SetPoint","DataType":{"Id":11},"ValueRank":-1,"ArrayDimensions":[],"Description":{"LocaleId":"","Text":"FillLevel Setpoint [l]"}}}]
   - Name: FillLevelSensor
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor
     Type: FillLevelSensorType
-    DisplayName: {"LocaleId":"","Text":"FillLevelSensor"}
     Children:
     - Name: FillLevel
       Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel
       Type: AnalogItemType
       DataType: Double
-      DisplayName: {"LocaleId":"","Text":"FillLevel"}
       Value: 50.0
       Children:
       - Name: EngineeringUnits
         Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EngineeringUnits
         Type: EUInformationType
         DataType: EUInformation
-        DisplayName: {"LocaleId":"","Text":"EngineeringUnits"}
         Value: 
          {
           "TypeId": {
@@ -83,7 +77,6 @@ Children:
         Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSensor.FillLevel.EURange
         Type: RangeType
         DataType: Range
-        DisplayName: {"LocaleId":"","Text":"EURange"}
         Children:
         - Name: Low
           Id: g=a2f99f90b68d4d79541866f246053a46
@@ -101,18 +94,15 @@ Children:
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.FillLevelSetPoint
     Type: BaseDataVariableType
     DataType: Double
-    DisplayName: {"LocaleId":"","Text":"FillLevelSetPoint"}
     Value: 50.0
   - Class: Method
     Name: ns=5;Heat
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.Heat
-    DisplayName: {"LocaleId":"","Text":"Heat"}
     Children:
     - Name: ns=0;InputArguments
       Id: ns=5;i=6036
       Type: PropertyType
       DataType: Argument
-      DisplayName: {"LocaleId":"","Text":"InputArguments"}
       ValueRank: OneDimension
       ArrayDimensions: [1]
       Value: [{"TypeId":{"Id":296},"Body":{"Name":"SetPoint","DataType":{"Id":11},"ValueRank":-1,"ArrayDimensions":[],"Description":{"LocaleId":"","Text":"Temperature Setpoint [°C]"}}}]
@@ -120,25 +110,21 @@ Children:
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.HeaterStatus
     Type: BaseDataVariableType
     DataType: HeaterStatus
-    DisplayName: {"LocaleId":"","Text":"HeaterStatus"}
     Value: 1
   - Name: TemperatureSensor
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor
     Type: TemperatureSensorType
-    DisplayName: {"LocaleId":"","Text":"TemperatureSensor"}
     Children:
     - Name: Temperature
       Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature
       Type: AnalogItemType
       DataType: Double
-      DisplayName: {"LocaleId":"","Text":"Temperature"}
       Value: 29.13626851335509
       Children:
       - Name: EngineeringUnits
         Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EngineeringUnits
         Type: EUInformationType
         DataType: EUInformation
-        DisplayName: {"LocaleId":"","Text":"EngineeringUnits"}
         Value: 
          {
           "TypeId": {
@@ -181,7 +167,6 @@ Children:
         Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSensor.Temperature.EURange
         Type: RangeType
         DataType: Range
-        DisplayName: {"LocaleId":"","Text":"EURange"}
         Value: 
          {
           "TypeId": {
@@ -210,5 +195,4 @@ Children:
     Id: ns=5;s=Demo.BoilerDemo.Boiler1.TemperatureSetPoint
     Type: BaseDataVariableType
     DataType: Double
-    DisplayName: {"LocaleId":"","Text":"TemperatureSetPoint"}
     Value: 90.0

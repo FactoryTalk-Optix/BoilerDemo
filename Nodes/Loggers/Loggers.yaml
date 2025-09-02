@@ -158,6 +158,11 @@ Children:
     Type: PropertyType
     DataType: Boolean
     Value: true
+  - Name: PollingPeriod
+    Id: g=cd6517d32f1a59317db9af4c886326b9
+    Type: PropertyType
+    DataType: Duration
+    Value: "0:00:00:01.0000000"
 - Name: AlarmsEventLogger
   Id: g=5c0e323e6bf05aabd26cb311e39ed107
   Type: EventLogger

@@ -183,6 +183,11 @@ Children:
     Id: g=bdec71d78dbe5793007ecb6b7b26ddf2
     Type: BaseVariableType
     DataType: Size
+  - Name: BorderThickness
+    Id: g=d16dc6b2aed3bef2fccaac2f2d818ee2
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
 - Name: IconGaugeTank2
   Id: g=fd3ec927ff5574a702fab874ac4747a5
   Supertype: Rectangle
@@ -364,6 +369,11 @@ Children:
     Id: g=297f4860f06f7405970d4e93e4e7a383
     Type: BaseVariableType
     DataType: Size
+  - Name: BorderThickness
+    Id: g=32f3a9f7c9f1fba84275bea8dd9c623b
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
 - Name: IconGaugeBoiler
   Id: g=8aba8ce92ad243c115fe4975af1815a7
   Supertype: Rectangle
@@ -545,6 +555,11 @@ Children:
     Id: g=97ee465538a212497da250ec95197513
     Type: BaseVariableType
     DataType: Size
+  - Name: BorderThickness
+    Id: g=f6723e2d3522c0117a6a43b885ec4ade
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
 - Name: IconTrendTank1
   Id: g=8097537c899f13181507da890589b09d
   Supertype: Rectangle
@@ -726,6 +741,11 @@ Children:
     Id: g=b19be7703aed31acf864a2e7b7b64ed4
     Type: BaseVariableType
     DataType: Size
+  - Name: BorderThickness
+    Id: g=15ca7363fb26640e7f8c2817eaf6b7ac
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
 - Name: IconTrendTank2
   Id: g=375a995fcca923203e438b71a62864c9
   Supertype: Rectangle
@@ -907,6 +927,11 @@ Children:
     Id: g=3070bf9a86af07a04106e4cbfb076924
     Type: BaseVariableType
     DataType: Size
+  - Name: BorderThickness
+    Id: g=1bc339318b909f08a006f98cae3a4b66
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional
 - Name: IconTrendBoiler
   Id: g=b7ac0e82969b51399c723a489ccd1f2f
   Supertype: Rectangle
@@ -1088,3 +1113,8 @@ Children:
     Id: g=050cb9bc61b6268f2ac88548cc3fd7eb
     Type: BaseVariableType
     DataType: Size
+  - Name: BorderThickness
+    Id: g=a9858fb263aa395547f7f842b71031d5
+    Type: BaseDataVariableType
+    DataType: Size
+    ModellingRule: Optional

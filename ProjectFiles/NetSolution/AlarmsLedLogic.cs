@@ -1,8 +1,10 @@
 #region Using directives
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
 using FTOptix.Alarm;
 using FTOptix.NetLogic;
 using FTOptix.UI;
-using System.Linq;
 using UAManagedCore;
 #endregion
 
@@ -11,7 +13,7 @@ public class AlarmsLedLogic : BaseNetLogic
     public override void Start()
     {
         // Insert code to be executed when the user-defined logic is started
-        NotificationIcon = (Led)Owner;
+        notificationIcon = (Led)Owner;
         alarmCheck = new PeriodicTask(AlarmIconHandler, 500, LogicObject);
         alarmCheck.Start();
     }
@@ -26,33 +28,48 @@ public class AlarmsLedLogic : BaseNetLogic
         IContext context = LogicObject.Context;
         // Get list of alarms from LocalizedAlarms
         var retainedAlarms = context.GetNode(FTOptix.Alarm.Objects.RetainedAlarms);
-        var alarmsObjects = ((UAManagedCore.UANode)retainedAlarms).Children?.FirstOrDefault(t => t.BrowseName == "en-US")?.Children;
+
+        if (retainedAlarms == null)
+        {
+            notificationIcon.Visible = false;
+            return;
+        }
+
+        // Use regex to find the language folder (e.g., "en-US", "fr-FR")
+        var alarmsObjects = ((UAManagedCore.UANode)retainedAlarms).Children?
+            .FirstOrDefault(t => isoCodePattern.IsMatch(t.BrowseName))?.Children;
+
         // Check for severity
         if (alarmsObjects?.Any() == true)
         {
-            NotificationIcon.Visible = true;
+            notificationIcon.Visible = true;
             if (alarmsObjects.Any(t => t.GetVariable("Severity").Value >= 100))
             {
-                NotificationIcon.Visible = true;
-                NotificationIcon.Color = Colors.Red;
+                notificationIcon.Visible = true;
+                notificationIcon.Color = Colors.Red;
             }
             else if (alarmsObjects.Any(t => t.GetVariable("Severity").Value >= 10))
             {
-                NotificationIcon.Visible = true;
-                NotificationIcon.Color = Colors.Orange;
+                notificationIcon.Visible = true;
+                notificationIcon.Color = Colors.Orange;
             }
             else
             {
-                NotificationIcon.Visible = true;
-                NotificationIcon.Color = Colors.Blue;
+                notificationIcon.Visible = true;
+                notificationIcon.Color = Colors.Blue;
             }
         }
         else
         {
-            NotificationIcon.Visible = false;
+            notificationIcon.Visible = false;
         }
     }
 
+    // Private members
     private PeriodicTask alarmCheck;
-    private Led NotificationIcon;
+    private Led notificationIcon;
+
+    // Pattern for ISO language codes like "en-US", "fr-FR", etc.
+    private readonly Regex isoCodePattern = new Regex(@"^[a-z]{2}-[A-Z]{2}$");
+
 }

@@ -337,6 +337,26 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 18.0
+  - Name: RectangleStyles
+    Id: g=090c5de60340ebe426eaa933c03517df
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=3aa25242ed75263a3e357ba77d8e5e33
+      Type: RectangleStyle
+      Children:
+      - Name: BorderThickness
+        Id: g=d0618b964541baa09b3b047de40e3394
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 1.0
+  - Name: ScreenStyles
+    Id: g=d7e3723205c5ed07acc2072345b36843
+    Type: BaseObjectType
+    Children:
+    - Name: Default
+      Id: g=ef29ccee2256ef12e5bce647071dbd1e
+      Type: ScreenStyle
 - Name: WebPresentationEngine
   Id: g=fd123dfcbf54033bd90ab2a897ac901a
   Type: ns=36;PresentationEngine
@@ -917,6 +937,10 @@ Children:
     Type: BaseDataVariableType
     DataType: UInt32
     Value: 20
+  - Name: VirtualKeyboard
+    Id: g=5c579dfae947ab0c43449dc893763df1
+    Type: BaseDataVariableType
+    DataType: VirtualKeyboardEngineTypeEnum
 - Name: NativePresentationEngine
   Id: g=ee73609dd316b6b1fd32f4e1782474c8
   Type: NativePresentationEngine
@@ -944,11 +968,11 @@ Children:
       Type: PropertyType
       DataType: NodeId
       Value: "/Types/ObjectTypes/BaseObjectType/StyleSheet"
-  - Name: EnableVirtualKeyboard
+  - Name: VirtualKeyboard
     Id: g=149007008c97fac0335d826f246b2060
     Type: BaseDataVariableType
-    DataType: Boolean
-    Value: true
+    DataType: VirtualKeyboardEngineTypeEnum
+    Value: 1
   - Name: StartingUser
     Id: g=f071e5f308b65e3887471b1783a37c1d
     Type: NodePointer
@@ -2539,7 +2563,6 @@ Children:
           Id: g=f9bb589537894d317c7ba7052c7e0067
           Type: BaseDataVariableType
           DataType: SortOrderEnum
-          ModellingRule: Optional
           Value: 1
         - Name: SortColumn
           Id: g=cff3e7429ce7d2e56c0eec697cffa87e
@@ -2639,3 +2662,4 @@ Children:
       Value: 5.0
 - File: Templates/Templates.yaml
 - File: Screens/Screens.yaml
+- File: Keyboards/Keyboards.yaml

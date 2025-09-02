@@ -7442,7 +7442,6 @@ Children:
           Id: g=74a39c38d2e332456cb5a2a17082eb32
           Type: BaseDataVariableType
           DataType: SortOrderEnum
-          ModellingRule: Optional
           Value: 1
       - Name: HorizontalAlignment
         Id: g=60fbe7222a47f4251a50e27396e71853
@@ -8247,12 +8246,6 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 200.0
-        - Name: BorderThickness
-          Id: g=90425c0faf98a058d433c5009dc329a0
-          Type: BaseDataVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 1.0
         - Name: LeftMargin
           Id: g=8771c1ad74b4338c3bde6c11618a79f1
           Type: BaseVariableType
@@ -8688,6 +8681,37 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 70.0
+          - Name: ContentWidth
+            Id: g=89d0700d74c55eb3cfa0358923320fe7
+            Type: BaseDataVariableType
+            DataType: Size
+            AccessLevel: Read
+          - Name: ContentHeight
+            Id: g=9715abee92c399a3e9377945142a3dd6
+            Type: BaseDataVariableType
+            DataType: Size
+            AccessLevel: Read
+          - Name: ViewWidth
+            Id: g=f5930cb8bdfa943218f19a1616ac6715
+            Type: BaseDataVariableType
+            DataType: Size
+            AccessLevel: Read
+          - Name: ViewHeight
+            Id: g=0721e734b984627689015e1acff6e19f
+            Type: BaseDataVariableType
+            DataType: Size
+            AccessLevel: Read
+          - Name: ContentX
+            Id: g=2a759311d402986f160d98ff9e10dd78
+            Type: BaseDataVariableType
+            DataType: Size
+          - Name: ContentY
+            Id: g=d90ef47bba7a518bb1801673812f9e68
+            Type: BaseDataVariableType
+            DataType: Size
+          - Class: Reference
+            Target: ns=13;i=1394
+            Direction: Forward
         - Name: RecipesComboBox
           Id: g=59c4a32692aa71d844896d7eb5f9fb9f
           Type: ComboBox
@@ -10442,7 +10466,6 @@ Children:
           Id: g=3ec567178c705b0930b6b35280f91ae0
           Type: BaseDataVariableType
           DataType: SortOrderEnum
-          ModellingRule: Optional
       - Name: HorizontalAlignment
         Id: g=b6acc440043099bb2bd8fbb7247f28bf
         Type: BaseVariableType
@@ -10758,6 +10781,10 @@ Children:
             Type: DynamicLink
             DataType: NodePath
             Value: "../Columns/Timestamp@NodeId"
+        - Name: SortOrder
+          Id: g=715338ce4079f010c750bb7004baa17f
+          Type: BaseDataVariableType
+          DataType: SortOrderEnum
       - Name: HorizontalAlignment
         Id: g=e1cdcfc509df66cf0bff484761b07225
         Type: BaseVariableType
@@ -12755,7 +12782,6 @@ Children:
           Id: g=e97ea314f1b0a10d311780d2c8a48540
           Type: BaseDataVariableType
           DataType: SortOrderEnum
-          ModellingRule: Optional
           Value: 1
         - Name: SortColumn
           Id: g=c67f6c0a423b64f54692e52c68532746
@@ -12886,6 +12912,11 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 1
+    - Name: BorderThickness
+      Id: g=de533d77a05626ff64ab3658995fc5db
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
   - Name: VerticalAlignment
     Id: g=abc494a8e0189eea03cfd43f16c07ffb
     Type: BaseVariableType
@@ -13718,7 +13749,6 @@ Children:
         Id: g=6461f5bfcda875be2424a637d31cad06
         Type: BaseDataVariableType
         DataType: SortOrderEnum
-        ModellingRule: Optional
         Value: 1
       - Name: HorizontalAlignment
         Id: g=3809ceaca3591ebdef44e22332bcd57c
@@ -13832,6 +13862,11 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 1
+    - Name: BorderThickness
+      Id: g=305b1b88fe5e81c023af5d0a21aee1f5
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
 - Name: Dashboard
   Id: g=fb27ec9ecd2f039aeb55368b776e21ad
   Supertype: BasePage
@@ -13995,12 +14030,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 50.0
-    - Name: BorderThickness
-      Id: g=c79a310ccea496a1951be08d093eb3f3
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
     - Name: CornerRadius
       Id: g=b808735ea2e322870f7303e0c5e3b848
       Type: BaseDataVariableType

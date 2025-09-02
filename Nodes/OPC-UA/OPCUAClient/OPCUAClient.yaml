@@ -74,32 +74,27 @@ Children:
   - Name: ns=5;Demo
     Id: ns=5;s=Demo
     Type: FolderType
-    DisplayName: {"LocaleId":"","Text":"Demo"}
     Children:
     - File: BoilerDemo/BoilerDemo.yaml
   - Name: TemperatureSensorType
     Id: ns=5;i=1001
     Supertype: BaseObjectType
-    DisplayName: {"LocaleId":"","Text":"TemperatureSensorType"}
     Children:
     - Name: ns=5;Temperature
       Id: ns=5;i=6001
       Type: AnalogItemType
       DataType: Double
-      DisplayName: {"LocaleId":"","Text":"Temperature"}
       Children:
       - Name: Definition
         Id: ns=5;i=6005
         Type: PropertyType
         DataType: String
-        DisplayName: {"LocaleId":"","Text":"Definition"}
         Description: {"LocaleId":"","Text":"A vendor-specific, human readable string that specifies how the value of this DataItem is calculated."}
         ModellingRule: Optional
       - Name: EngineeringUnits
         Id: ns=5;i=6002
         Type: EUInformationType
         DataType: EUInformation
-        DisplayName: {"LocaleId":"","Text":"EngineeringUnits"}
         ModellingRule: Optional
         Children:
         - Name: UnitId
@@ -124,7 +119,6 @@ Children:
         Id: ns=5;i=6003
         Type: RangeType
         DataType: Range
-        DisplayName: {"LocaleId":"","Text":"EURange"}
         Value: 
          {
           "TypeId": {
@@ -153,7 +147,6 @@ Children:
         Id: ns=5;i=6004
         Type: RangeType
         DataType: Range
-        DisplayName: {"LocaleId":"","Text":"InstrumentRange"}
         ModellingRule: Optional
         Children:
         - Name: Low
@@ -172,46 +165,39 @@ Children:
         Id: ns=5;i=6006
         Type: PropertyType
         DataType: Double
-        DisplayName: {"LocaleId":"","Text":"ValuePrecision"}
         Description: {"LocaleId":"","Text":"The maximum precision that the server can maintain for the item based on restrictions in the target environment."}
         ModellingRule: Optional
   - Class: DataType
     Name: HeaterStatus
     Id: ns=5;i=3001
     Supertype: Enumeration
-    DisplayName: {"LocaleId":"","Text":"HeaterStatus"}
     Children:
     - Name: ns=0;EnumStrings
       Id: ns=5;i=6028
       Type: PropertyType
       DataType: LocalizedText
-      DisplayName: {"LocaleId":"","Text":"EnumStrings"}
       ValueRank: OneDimension
       ArrayDimensions: [3]
       Value: [{"LocaleId":"","Text":"Off"},{"LocaleId":"","Text":"Heating"},{"LocaleId":"","Text":"Cooling"}]
   - Name: FillLevelSensorType
     Id: ns=5;i=1002
     Supertype: BaseObjectType
-    DisplayName: {"LocaleId":"","Text":"FillLevelSensorType"}
     Children:
     - Name: ns=5;FillLevel
       Id: ns=5;i=6007
       Type: AnalogItemType
       DataType: Double
-      DisplayName: {"LocaleId":"","Text":"FillLevel"}
       Children:
       - Name: Definition
         Id: ns=5;i=6011
         Type: PropertyType
         DataType: String
-        DisplayName: {"LocaleId":"","Text":"Definition"}
         Description: {"LocaleId":"","Text":"A vendor-specific, human readable string that specifies how the value of this DataItem is calculated."}
         ModellingRule: Optional
       - Name: EngineeringUnits
         Id: ns=5;i=6008
         Type: EUInformationType
         DataType: EUInformation
-        DisplayName: {"LocaleId":"","Text":"EngineeringUnits"}
         ModellingRule: Optional
         Children:
         - Name: UnitId
@@ -236,7 +222,6 @@ Children:
         Id: ns=5;i=6009
         Type: RangeType
         DataType: Range
-        DisplayName: {"LocaleId":"","Text":"EURange"}
         Children:
         - Name: Low
           Id: g=9f5a6f00ab2371df891fa25f472ef1b8
@@ -254,7 +239,6 @@ Children:
         Id: ns=5;i=6010
         Type: RangeType
         DataType: Range
-        DisplayName: {"LocaleId":"","Text":"InstrumentRange"}
         ModellingRule: Optional
         Children:
         - Name: Low
@@ -273,50 +257,42 @@ Children:
         Id: ns=5;i=6012
         Type: PropertyType
         DataType: Double
-        DisplayName: {"LocaleId":"","Text":"ValuePrecision"}
         Description: {"LocaleId":"","Text":"The maximum precision that the server can maintain for the item based on restrictions in the target environment."}
         ModellingRule: Optional
   - Name: BoilerType
     Id: ns=5;i=1003
     Supertype: BaseObjectType
-    DisplayName: {"LocaleId":"","Text":"BoilerType"}
     Children:
     - Class: Method
       Name: ns=5;Fill
       Id: ns=5;i=7002
-      DisplayName: {"LocaleId":"","Text":"Fill"}
       Children:
       - Name: ns=0;InputArguments
         Id: ns=5;i=6029
         Type: PropertyType
         DataType: Argument
-        DisplayName: {"LocaleId":"","Text":"InputArguments"}
         ValueRank: OneDimension
         ArrayDimensions: [1]
         Value: [{"TypeId":{"Id":296},"Body":{"Name":"SetPoint","DataType":{"Id":11},"ValueRank":-1,"ArrayDimensions":[],"Description":{"LocaleId":"","Text":"FillLevel Setpoint [l]"}}}]
     - Name: ns=5;FillLevelSensor
       Id: ns=5;i=5002
       Type: FillLevelSensorType
-      DisplayName: {"LocaleId":"","Text":"FillLevelSensor"}
       Children:
       - Name: FillLevel
         Id: ns=5;i=6019
         Type: AnalogItemType
         DataType: Double
-        DisplayName: {"LocaleId":"","Text":"FillLevel"}
         Children:
         - Name: Definition
           Id: ns=5;i=6020
           Type: PropertyType
           DataType: String
-          DisplayName: {"LocaleId":"","Text":"Definition"}
           Description: {"LocaleId":"","Text":"A vendor-specific, human readable string that specifies how the value of this DataItem is calculated."}
           ModellingRule: Optional
         - Name: EngineeringUnits
           Id: ns=5;i=6021
           Type: EUInformationType
           DataType: EUInformation
-          DisplayName: {"LocaleId":"","Text":"EngineeringUnits"}
           ModellingRule: Optional
           Children:
           - Name: UnitId
@@ -341,7 +317,6 @@ Children:
           Id: ns=5;i=6022
           Type: RangeType
           DataType: Range
-          DisplayName: {"LocaleId":"","Text":"EURange"}
           Children:
           - Name: Low
             Id: g=8b5294d7ba17724755a1d72e4aef88c4
@@ -359,7 +334,6 @@ Children:
           Id: ns=5;i=6023
           Type: RangeType
           DataType: Range
-          DisplayName: {"LocaleId":"","Text":"InstrumentRange"}
           ModellingRule: Optional
           Children:
           - Name: Low
@@ -378,24 +352,20 @@ Children:
           Id: ns=5;i=6024
           Type: PropertyType
           DataType: Double
-          DisplayName: {"LocaleId":"","Text":"ValuePrecision"}
           Description: {"LocaleId":"","Text":"The maximum precision that the server can maintain for the item based on restrictions in the target environment."}
           ModellingRule: Optional
     - Name: ns=5;FillLevelSetPoint
       Id: ns=5;i=6025
       Type: BaseDataVariableType
       DataType: Double
-      DisplayName: {"LocaleId":"","Text":"FillLevelSetPoint"}
     - Class: Method
       Name: ns=5;Heat
       Id: ns=5;i=7001
-      DisplayName: {"LocaleId":"","Text":"Heat"}
       Children:
       - Name: ns=0;InputArguments
         Id: ns=5;i=6030
         Type: PropertyType
         DataType: Argument
-        DisplayName: {"LocaleId":"","Text":"InputArguments"}
         ValueRank: OneDimension
         ArrayDimensions: [1]
         Value: [{"TypeId":{"Id":296},"Body":{"Name":"SetPoint","DataType":{"Id":11},"ValueRank":-1,"ArrayDimensions":[],"Description":{"LocaleId":"","Text":"Temperature Setpoint [°C]"}}}]
@@ -403,30 +373,25 @@ Children:
       Id: ns=5;i=6027
       Type: BaseDataVariableType
       DataType: HeaterStatus
-      DisplayName: {"LocaleId":"","Text":"HeaterStatus"}
     - Name: ns=5;TemperatureSensor
       Id: ns=5;i=5001
       Type: TemperatureSensorType
-      DisplayName: {"LocaleId":"","Text":"TemperatureSensor"}
       Children:
       - Name: Temperature
         Id: ns=5;i=6013
         Type: AnalogItemType
         DataType: Double
-        DisplayName: {"LocaleId":"","Text":"Temperature"}
         Children:
         - Name: Definition
           Id: ns=5;i=6014
           Type: PropertyType
           DataType: String
-          DisplayName: {"LocaleId":"","Text":"Definition"}
           Description: {"LocaleId":"","Text":"A vendor-specific, human readable string that specifies how the value of this DataItem is calculated."}
           ModellingRule: Optional
         - Name: EngineeringUnits
           Id: ns=5;i=6015
           Type: EUInformationType
           DataType: EUInformation
-          DisplayName: {"LocaleId":"","Text":"EngineeringUnits"}
           ModellingRule: Optional
           Children:
           - Name: UnitId
@@ -451,7 +416,6 @@ Children:
           Id: ns=5;i=6016
           Type: RangeType
           DataType: Range
-          DisplayName: {"LocaleId":"","Text":"EURange"}
           Value: 
            {
             "TypeId": {
@@ -480,7 +444,6 @@ Children:
           Id: ns=5;i=6017
           Type: RangeType
           DataType: Range
-          DisplayName: {"LocaleId":"","Text":"InstrumentRange"}
           ModellingRule: Optional
           Children:
           - Name: Low
@@ -499,11 +462,9 @@ Children:
           Id: ns=5;i=6018
           Type: PropertyType
           DataType: Double
-          DisplayName: {"LocaleId":"","Text":"ValuePrecision"}
           Description: {"LocaleId":"","Text":"The maximum precision that the server can maintain for the item based on restrictions in the target environment."}
           ModellingRule: Optional
     - Name: ns=5;TemperatureSetPoint
       Id: ns=5;i=6026
       Type: BaseDataVariableType
       DataType: Double
-      DisplayName: {"LocaleId":"","Text":"TemperatureSetPoint"}

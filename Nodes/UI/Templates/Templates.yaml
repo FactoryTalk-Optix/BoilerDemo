@@ -93,6 +93,11 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 1
+    - Name: BorderThickness
+      Id: g=f5e04eef78628902d8f7f1fd2084642a
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
   - Name: FTOptixLogo
     Id: g=1de2575b252a83a07acae958111c3877
     Type: Image
@@ -4714,6 +4719,11 @@ Children:
     Id: g=cf1798d8d5d2641655a118d1ca2bed8d
     Type: BaseDataVariableType
     DataType: Boolean
+    ModellingRule: Optional
+  - Name: BorderThickness
+    Id: g=3ab24c6f6f7e95ad405129a714567e91
+    Type: BaseDataVariableType
+    DataType: Size
     ModellingRule: Optional
 - File: AdvancedTrendForDataLogger/AdvancedTrendForDataLogger.yaml
 - File: Faceplates/Faceplates.yaml

@@ -71,12 +71,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 320.0
-    - Name: BorderThickness
-      Id: g=b8ca1ae4d87e88b6b04ab1c3a569a8d2
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
     - Name: HorizontalAlignment
       Id: g=66771bf04dcd6da924bdf88f0400c0fb
       Type: BaseVariableType
@@ -345,12 +339,6 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 80.0
-      - Name: BorderThickness
-        Id: g=257851cad6c1cebc035d689c8efecadc
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 1.0
       - Name: Background
         Id: g=299ce6494f987573681b73035c728398
         Type: Rectangle
@@ -367,12 +355,6 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 90.0
-        - Name: BorderThickness
-          Id: g=9ebcce38c74a8dd039bfe8d5c7344a88
-          Type: BaseDataVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 1.0
         - Name: HorizontalAlignment
           Id: g=8f1835077446be40579fd2e8922010b8
           Type: BaseVariableType
@@ -464,12 +446,6 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 80.0
-      - Name: BorderThickness
-        Id: g=c9eac0d3388a3522a14d4444b786c64f
-        Type: BaseDataVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 1.0
       - Name: Background
         Id: g=e0c9795e7fc9ee3834fb20728528d498
         Type: Rectangle
@@ -480,12 +456,6 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 160.0
-        - Name: BorderThickness
-          Id: g=a5440062dc2d88bf7ed174187a56d41e
-          Type: BaseDataVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 1.0
         - Name: VerticalAlignment
           Id: g=3355749a65cf81ad9ebf702b0afe2591
           Type: BaseVariableType
@@ -1808,12 +1778,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 20.0
-    - Name: BorderThickness
-      Id: g=916cff3f1d130557fd8bc40b6607397f
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 1.0
     - Name: RightMargin
       Id: g=953941fe0e5d12504cd2681ead806957
       Type: BaseVariableType
@@ -2565,12 +2529,6 @@ Children:
           DataType: Size
           ModellingRule: Optional
           Value: 20.0
-        - Name: BorderThickness
-          Id: g=5236c7fc5b1bdccb2a47ee27fff874e0
-          Type: BaseDataVariableType
-          DataType: Size
-          ModellingRule: Optional
-          Value: 1.0
         - Name: DropdownButton1
           Id: g=5c8e11f0ba52e70a21914bfe887ec9d5
           Type: DropDownButton
@@ -3554,6 +3512,14 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 650.0
+    - Name: SortColumn
+      Id: g=6ad0588ab38ad7c3652bf9bc74a1f13e
+      Type: BaseDataVariableType
+      DataType: NodeId
+    - Name: SortOrder
+      Id: g=a75222e9be30eff5fe2dea9e81909594
+      Type: BaseDataVariableType
+      DataType: SortOrderEnum
   - Name: PolyLine1
     Id: g=aa42354ddbd28e9d7bee83574438c5dc
     Type: PolyLine
@@ -3832,6 +3798,37 @@ Children:
         DataType: ScrollAxesEnabledEnum
         ModellingRule: Optional
         Value: 2
+      - Name: ContentWidth
+        Id: g=b1006a52164b1db78bec338cbb6bcf2d
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ContentHeight
+        Id: g=c313e22cb8c37ce0afe0bc31ef39451e
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ViewWidth
+        Id: g=7f52777d0d64b62e401346eede61c84b
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ViewHeight
+        Id: g=e0c4f620f478fbd841135455b643f160
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ContentX
+        Id: g=f7713e5c258418d80dad969dc9700942
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: ContentY
+        Id: g=25024b146f45009da873c12645ba5046
+        Type: BaseDataVariableType
+        DataType: Size
+      - Class: Reference
+        Target: ns=13;i=1394
+        Direction: Forward
     - Name: TrendRangesLogic
       Id: g=93cd791bc4eb2b19553c381b149caa02
       Type: NetLogic
@@ -4221,6 +4218,37 @@ Children:
         DataType: ScrollAxesEnabledEnum
         ModellingRule: Optional
         Value: 2
+      - Name: ContentWidth
+        Id: g=378ac9a280f7b4614f12499df44e7e22
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ContentHeight
+        Id: g=0eb16dc2506db35324148322d3d74ffa
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ViewWidth
+        Id: g=df25b1a18db3432f74f4e231036460e8
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ViewHeight
+        Id: g=4821fc869a37d3fbd530e5a4e6b0bdbd
+        Type: BaseDataVariableType
+        DataType: Size
+        AccessLevel: Read
+      - Name: ContentX
+        Id: g=8e0f14f962778b3bb5f1664d13609295
+        Type: BaseDataVariableType
+        DataType: Size
+      - Name: ContentY
+        Id: g=2ad75eff69ef7f001db0fa9c783568a5
+        Type: BaseDataVariableType
+        DataType: Size
+      - Class: Reference
+        Target: ns=13;i=1394
+        Direction: Forward
     - Name: Label1
       Id: g=c98c14b2c85d8b65cb739a4de69d014b
       Type: Label
